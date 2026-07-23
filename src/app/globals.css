@@ -4,3 +4,30 @@
 body {
   background-color: #F8F7F4;
 }
+
+
+@keyframes bannerZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+.banner-swiper,
+.banner-swiper .swiper-wrapper,
+.banner-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image {
+  transform: scale(1);
+  will-change: transform;
+}
+
+.banner-swiper .swiper-slide-active .banner-image {
+  animation: bannerZoom 6s ease-out forwards;
+}

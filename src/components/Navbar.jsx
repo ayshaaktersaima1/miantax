@@ -1,16 +1,19 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+import { Button, Dropdown, Label } from "@heroui/react";
+
+import { IoCallOutline } from "react-icons/io5";
 import {
-    FiChevronDown,
-    FiChevronRight,
-    FiMenu,
-    FiPhone,
-    FiX,
-} from "react-icons/fi";
+    IoIosArrowDown,
+    IoIosArrowForward,
+    IoMdClose,
+    IoMdMenu,
+} from "react-icons/io";
 
 const serviceItems = [
     {
@@ -118,55 +121,49 @@ const serviceItems = [
 ];
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState(null);
-    const [desktopSubmenuTop, setDesktopSubmenuTop] = useState(0);
+    const pathname = usePathname();
 
-    const desktopServicesRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileServicesOpen, setIsMobileServicesOpen] =
+        useState(false);
+    const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
 
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-        setIsServicesOpen(false);
-        setActiveDesktopSubmenu(null);
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+        setIsMobileServicesOpen(false);
+        setOpenMobileSubmenu(null);
     };
 
-    const handleDesktopSubmenu = (event, service) => {
-        if (!service.submenu || !desktopServicesRef.current) {
-            setActiveDesktopSubmenu(null);
+    const handleMobileServiceClick = (event, service) => {
+        if (!service.submenu) {
+            closeMobileMenu();
             return;
         }
 
-        const dropdownRect =
-            desktopServicesRef.current.getBoundingClientRect();
+        if (openMobileSubmenu !== service.label) {
+            event.preventDefault();
+            setOpenMobileSubmenu(service.label);
+            return;
+        }
 
-        const itemRect = event.currentTarget.getBoundingClientRect();
+        closeMobileMenu();
+    };
 
-        const estimatedSubmenuHeight =
-            service.submenu.length * 48 + 16;
-
-        const availableHeight =
-            window.innerHeight - dropdownRect.top - 8;
-
-        const maximumTop = Math.max(
-            0,
-            availableHeight - estimatedSubmenuHeight
+    const isServiceActive = (service) => {
+        return (
+            pathname === service.href ||
+            service.submenu?.some(
+                (subItem) => pathname === subItem.href
+            )
         );
-
-        const itemTop = itemRect.top - dropdownRect.top;
-
-        setDesktopSubmenuTop(
-            Math.max(0, Math.min(itemTop, maximumTop))
-        );
-
-        setActiveDesktopSubmenu(service);
     };
 
     return (
         <nav className="sticky top-0 z-50 mx-auto -mt-12 w-[96%] rounded-3xl bg-white shadow-lg">
             <div className="px-4 lg:px-6">
-                <div className="flex h-24 items-center justify-between">
-                    <Link href="/">
+                <div className="flex h-20 items-center justify-between lg:h-24">
+                    <Link href="/" onClick={closeMobileMenu}>
                         <Image
                             src="/images/Logo.png"
                             alt="Mian Tax Associates"
@@ -177,202 +174,378 @@ const Navbar = () => {
                         />
                     </Link>
 
-                    <div className="hidden items-center gap-10 md:flex">
+                    <div className="hidden items-center gap-6 lg:flex">
+                        <Link
+                            href="/"
+                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
+                                }`}
+                        >
+                            Home
+                        </Link>
+
                         <Link
                             href="/about-us"
-                            className="font-medium text-[#061D3A] transition hover:text-[#D7A332]"
+                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/about-us"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
+                                }`}
                         >
                             About Us
                         </Link>
 
-                        <div className="group/services relative flex h-24 items-center">
-                            <Link
-                                href="/services"
-                                className="flex items-center gap-1 font-medium text-[#061D3A] transition hover:text-[#D7A332]"
+                        <div onMouseEnter={() => setIsOpen(true)}>
+                            <Dropdown
+                                isOpen={isOpen}
+                                onOpenChange={setIsOpen}
                             >
-                                Services
-
-                                <FiChevronDown className="transition-transform duration-500 ease-out group-hover/services:rotate-180" />
-                            </Link>
-
-                            <div
-                                onMouseLeave={() =>
-                                    setActiveDesktopSubmenu(null)
-                                }
-                                className="invisible absolute left-1/2 top-full -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 ease-out group-hover/services:visible group-hover/services:translate-y-0 group-hover/services:opacity-100"
-                            >
-                                <div
-                                    ref={desktopServicesRef}
-                                    className="max-h-[calc(100vh-110px)] w-82.5 overflow-y-auto overscroll-contain rounded-xl bg-[#061D3A] p-2 shadow-xl"
+                                <Button
+                                    aria-label="Services"
+                                    variant="secondary"
+                                    className="flex min-w-0 items-center gap-1 bg-transparent p-0 font-medium text-[#061D3A] shadow-none hover:bg-transparent hover:text-[#D7A332]"
                                 >
-                                    {serviceItems.map((service) => (
-                                        <div
-                                            key={service.label}
-                                            onMouseEnter={(event) =>
-                                                handleDesktopSubmenu(
-                                                    event,
-                                                    service
-                                                )
-                                            }
-                                        >
-                                            <Link
-                                                href={service.href}
-                                                className="flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#061D3A]"
-                                            >
-                                                {service.label}
+                                    Services
 
-                                                {service.submenu && (
-                                                    <FiChevronRight className="shrink-0 text-[#D7A332]" />
-                                                )}
-                                            </Link>
-                                        </div>
-                                    ))}
-                                </div>
+                                    <IoIosArrowDown
+                                        className={`transition-transform ${isOpen ? "rotate-180" : ""
+                                            }`}
+                                    />
+                                </Button>
 
-                                {activeDesktopSubmenu?.submenu && (
-                                    <div
-                                        style={{
-                                            top: `${desktopSubmenuTop}px`,
-                                        }}
-                                        className="absolute left-full ml-1 max-h-[calc(100vh-110px)] w-77.5 overflow-y-auto overscroll-contain rounded-xl bg-[#061D3A] p-2 shadow-xl"
-                                    >
-                                        {activeDesktopSubmenu.submenu.map(
-                                            (subItem) => (
-                                                <Link
-                                                    key={subItem.label}
-                                                    href={subItem.href}
-                                                    className="block rounded-lg px-4 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#061D3A]"
+                                <Dropdown.Popover
+                                    placement="bottom"
+                                    className="w-80 rounded-xl bg-[#061D3A] p-2"
+                                >
+                                    <Dropdown.Menu>
+                                        {serviceItems.map((service) =>
+                                            service.submenu ? (
+                                                <Dropdown.SubmenuTrigger
+                                                    key={service.href}
                                                 >
-                                                    {subItem.label}
-                                                </Link>
+                                                    <Dropdown.Item
+                                                        id={service.label}
+                                                        textValue={
+                                                            service.label
+                                                        }
+                                                        className={`group rounded-lg ${isServiceActive(
+                                                            service
+                                                        )
+                                                                ? "bg-white text-[#061D3A]"
+                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                            }`}
+                                                    >
+                                                        <div className="flex w-full items-center justify-between">
+                                                            <Label className="text-inherit">
+                                                                {
+                                                                    service.label
+                                                                }
+                                                            </Label>
+
+                                                            <IoIosArrowForward className="text-inherit" />
+                                                        </div>
+                                                    </Dropdown.Item>
+
+                                                    <Dropdown.Popover
+                                                        placement="right top"
+                                                        className="w-80 rounded-xl bg-[#061D3A] p-2"
+                                                    >
+                                                        <Dropdown.Menu>
+                                                            <Dropdown.Item
+                                                                id={
+                                                                    service.href
+                                                                }
+                                                                textValue={
+                                                                    service.label
+                                                                }
+                                                                className={`rounded-lg ${pathname ===
+                                                                        service.href
+                                                                        ? "bg-white text-[#061D3A]"
+                                                                        : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                    }`}
+                                                            >
+                                                                <Link
+                                                                    href={
+                                                                        service.href
+                                                                    }
+                                                                    onClick={() =>
+                                                                        setIsOpen(
+                                                                            false
+                                                                        )
+                                                                    }
+                                                                    className="block w-full text-inherit"
+                                                                >
+                                                                    <Label className="text-inherit">
+                                                                        {
+                                                                            service.label
+                                                                        }
+                                                                    </Label>
+                                                                </Link>
+                                                            </Dropdown.Item>
+
+                                                            {service.submenu.map(
+                                                                (subItem) => (
+                                                                    <Dropdown.Item
+                                                                        key={
+                                                                            subItem.href
+                                                                        }
+                                                                        id={
+                                                                            subItem.href
+                                                                        }
+                                                                        textValue={
+                                                                            subItem.label
+                                                                        }
+                                                                        className={`rounded-lg ${pathname ===
+                                                                                subItem.href
+                                                                                ? "bg-white text-[#061D3A]"
+                                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                            }`}
+                                                                    >
+                                                                        <Link
+                                                                            href={
+                                                                                subItem.href
+                                                                            }
+                                                                            onClick={() =>
+                                                                                setIsOpen(
+                                                                                    false
+                                                                                )
+                                                                            }
+                                                                            className="block w-full text-inherit"
+                                                                        >
+                                                                            <Label className="text-inherit">
+                                                                                {
+                                                                                    subItem.label
+                                                                                }
+                                                                            </Label>
+                                                                        </Link>
+                                                                    </Dropdown.Item>
+                                                                )
+                                                            )}
+                                                        </Dropdown.Menu>
+                                                    </Dropdown.Popover>
+                                                </Dropdown.SubmenuTrigger>
+                                            ) : (
+                                                <Dropdown.Item
+                                                    key={service.href}
+                                                    id={service.href}
+                                                    textValue={service.label}
+                                                    className={`rounded-lg ${pathname ===
+                                                            service.href
+                                                            ? "bg-white text-[#061D3A]"
+                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                        }`}
+                                                >
+                                                    <Link
+                                                        href={service.href}
+                                                        onClick={() =>
+                                                            setIsOpen(false)
+                                                        }
+                                                        className="block w-full text-inherit"
+                                                    >
+                                                        <Label className="text-inherit">
+                                                            {service.label}
+                                                        </Label>
+                                                    </Link>
+                                                </Dropdown.Item>
                                             )
                                         )}
-                                    </div>
-                                )}
-                            </div>
+                                    </Dropdown.Menu>
+                                </Dropdown.Popover>
+                            </Dropdown>
                         </div>
 
                         <Link
                             href="/blog"
-                            className="font-medium text-[#061D3A] transition hover:text-[#D7A332]"
+                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/blog"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
+                                }`}
                         >
                             Blog
                         </Link>
 
                         <Link
                             href="/contact-us"
-                            className="font-medium text-[#061D3A] transition hover:text-[#D7A332]"
+                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/contact-us"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
+                                }`}
                         >
-                            Contact us
+                            Contact Us
                         </Link>
                     </div>
 
                     <Link
                         href="tel:03000053038"
-                        className="hidden items-center gap-3 lg:flex"
+                        className="hidden items-center gap-2 text-[#061D3A] lg:flex"
                     >
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D7A332] text-xl text-[#D7A332]">
-                            <FiPhone />
-                        </div>
+                        <IoCallOutline
+                            size={30}
+                            className="text-[#D7A332]"
+                        />
 
-                        <div>
-                            <p className="text-sm text-gray-500">
-                                Call Us Anytime
-                            </p>
-
-                            <p className="text-lg font-semibold text-[#061D3A]">
-                                0300-0053038
-                            </p>
-                        </div>
+                        <p className="font-semibold">0300-0053038</p>
                     </Link>
 
                     <button
                         type="button"
-                        aria-label="Toggle menu"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="text-2xl text-[#061D3A] md:hidden"
+                        aria-label="Toggle navigation menu"
+                        onClick={() =>
+                            setIsMobileMenuOpen((current) => !current)
+                        }
+                        className="text-3xl text-[#061D3A] lg:hidden"
                     >
-                        {isMenuOpen ? <FiX /> : <FiMenu />}
+                        {isMobileMenuOpen ? <IoMdClose /> : <IoMdMenu />}
                     </button>
                 </div>
-            </div>
 
-            {isMenuOpen && (
-                <div className="max-h-[calc(100vh-96px)] overflow-y-auto rounded-b-3xl border-t border-gray-200 bg-white px-5 pb-6 md:hidden">
-                    <Link
-                        href="/about"
-                        onClick={closeMenu}
-                        className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
-                    >
-                        About Us
-                    </Link>
-
-                    <div className="border-b border-gray-100">
-                        <button
-                            type="button"
-                            onClick={() =>
-                                setIsServicesOpen(!isServicesOpen)
-                            }
-                            className="flex w-full items-center justify-between py-4 font-medium text-[#061D3A]"
+                {isMobileMenuOpen && (
+                    <div className="border-t border-gray-200 pb-5 lg:hidden">
+                        <Link
+                            href="/"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
                         >
-                            Services
+                            Home
+                        </Link>
 
-                            <FiChevronDown
-                                className={`transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
-                                    }`}
-                            />
-                        </button>
+                        <Link
+                            href="/about-us"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                        >
+                            About Us
+                        </Link>
 
-                        {isServicesOpen && (
-                            <div className="mb-3 max-h-[60vh] overflow-y-auto overscroll-contain rounded-xl bg-[#061D3A] p-2">
-                                {serviceItems.map((service) => (
-                                    <Link
-                                        key={service.label}
-                                        href={service.href}
-                                        onClick={closeMenu}
-                                        className="block rounded-lg px-4 py-3 text-sm text-white transition hover:bg-white hover:text-[#061D3A]"
-                                    >
-                                        {service.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                        <div className="border-b border-gray-100">
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    setIsMobileServicesOpen(
+                                        (current) => !current
+                                    )
+                                }
+                                className="flex w-full items-center justify-between py-4 font-medium text-[#061D3A]"
+                            >
+                                Services
 
-                    <Link
-                        href="/blog"
-                        onClick={closeMenu}
-                        className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
-                    >
-                        Blog
-                    </Link>
+                                <IoIosArrowDown
+                                    className={`transition-transform ${isMobileServicesOpen
+                                            ? "rotate-180"
+                                            : ""
+                                        }`}
+                                />
+                            </button>
 
-                    <Link
-                        href="/contact"
-                        onClick={closeMenu}
-                        className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
-                    >
-                        Contact us
-                    </Link>
+                            {isMobileServicesOpen && (
+                                <div className="mb-4 rounded-xl bg-[#061D3A] p-2">
+                                    {serviceItems.map((service) => {
+                                        const submenuOpen =
+                                            openMobileSubmenu ===
+                                            service.label;
 
-                    <Link
-                        href="tel:03000053038"
-                        className="mt-5 flex items-center gap-3 rounded-xl bg-[#061D3A] p-4 text-white"
-                    >
-                        <FiPhone className="text-xl text-[#D7A332]" />
+                                        const serviceActive =
+                                            isServiceActive(service);
 
-                        <div>
-                            <p className="text-xs text-gray-300">
-                                Call Us Anytime
-                            </p>
+                                        return (
+                                            <div key={service.href}>
+                                                <Link
+                                                    href={service.href}
+                                                    onClick={(event) =>
+                                                        handleMobileServiceClick(
+                                                            event,
+                                                            service
+                                                        )
+                                                    }
+                                                    className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium ${serviceActive ||
+                                                            submenuOpen
+                                                            ? "bg-white text-[#061D3A]"
+                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                        }`}
+                                                >
+                                                    <span>
+                                                        {service.label}
+                                                    </span>
 
-                            <p className="font-semibold">
-                                0300-0053038
-                            </p>
+                                                    {service.submenu && (
+                                                        <IoIosArrowForward
+                                                            className={`transition-transform ${submenuOpen
+                                                                    ? "rotate-90"
+                                                                    : ""
+                                                                }`}
+                                                        />
+                                                    )}
+                                                </Link>
+
+                                                {service.submenu &&
+                                                    submenuOpen && (
+                                                        <div className="ml-4 border-l border-white/30 pl-2">
+                                                            {service.submenu.map(
+                                                                (
+                                                                    subItem
+                                                                ) => (
+                                                                    <Link
+                                                                        key={
+                                                                            subItem.href
+                                                                        }
+                                                                        href={
+                                                                            subItem.href
+                                                                        }
+                                                                        onClick={
+                                                                            closeMobileMenu
+                                                                        }
+                                                                        className={`block rounded-lg px-4 py-3 text-sm font-medium ${pathname ===
+                                                                                subItem.href
+                                                                                ? "bg-white text-[#061D3A]"
+                                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                            }`}
+                                                                    >
+                                                                        {
+                                                                            subItem.label
+                                                                        }
+                                                                    </Link>
+                                                                )
+                                                            )}
+                                                        </div>
+                                                    )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </div>
-                    </Link>
-                </div>
-            )}
+
+                        <Link
+                            href="/blog"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                        >
+                            Blog
+                        </Link>
+
+                        <Link
+                            href="/contact-us"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                        >
+                            Contact Us
+                        </Link>
+
+                        <Link
+                            href="tel:03000053038"
+                            onClick={closeMobileMenu}
+                            className="mt-4 flex items-center gap-2 font-semibold text-[#061D3A]"
+                        >
+                            <IoCallOutline
+                                size={26}
+                                className="text-[#D7A332]"
+                            />
+
+                            0300-0053038
+                        </Link>
+                    </div>
+                )}
+            </div>
         </nav>
     );
 };
