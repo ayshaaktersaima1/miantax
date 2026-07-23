@@ -1,6 +1,5 @@
 import CheckNumCard from "../serviceContentsCard/CheckNumCard";
 
-
 const benefits = [
     {
         title: "Limited Liability",
@@ -25,7 +24,7 @@ const benefits = [
     {
         title: "Credibility and Professionalism",
         description:
-            "Operating as a Single Member Company (SMC) enhances your business’s credibility. Incorporation lends a professional image to your operations, making establishing relationships with clients, suppliers, and financial institutions more accessible. This added credibility can open doors to more business opportunities and facilitate access to financing.",
+            "operating as a Single Member Company (SMC) enhances your business’s credibility. Incorporation lends a professional image to your operations, making establishing relationships with clients, suppliers, and financial institutions more accessible. This added credibility can open doors to more business opportunities and facilitate access to financing.",
     },
     {
         title: "Tax Benefits",
@@ -37,13 +36,8 @@ const benefits = [
 const SingleMemberCompanyContent = () => {
     return (
         <article className="min-w-0 space-y-8">
-            {/* Overview */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Single Member Company
-                </p>
-
-                <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h1 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Overview
                 </h1>
 
@@ -51,36 +45,27 @@ const SingleMemberCompanyContent = () => {
 
                 <div className="mt-6 space-y-5">
                     <p className="text-base leading-8 text-[#455468]">
-                        A Single Member Company (SMC) is a unique form of business
-                        entity in Pakistan designed for entrepreneurs who wish to
-                        operate their business as a separate legal entity without
-                        the need for multiple shareholders. This structure provides
-                        the benefits of limited liability while allowing a single
-                        individual to have complete control over the company’s
-                        operations.
+                        A Single Member Company (SMC) is a unique form of
+                        business entity in Pakistan designed for entrepreneurs
+                        who wish to operate their business as a separate legal
+                        entity without the need for multiple shareholders. This
+                        structure provides the benefits of limited liability
+                        while allowing a single individual to have complete
+                        control over the company’s operations.
                     </p>
 
                     <p className="text-base leading-8 text-[#455468]">
-                        At{" "}
-                        <strong className="font-semibold text-[#061D3A]">
-                            MIAN TAX ASSOCIATES
-                        </strong>
-                        , we specialize in assisting entrepreneurs with the
-                        registration and establishment of Single Member Companies
-                        (SMC), ensuring compliance with the legal framework set
-                        forth by the Securities and Exchange Commission of Pakistan
-                        (SECP).
+                        At MIAN TAX ASSOCIATES, we specialize in assisting
+                        entrepreneurs with the registration and establishment of
+                        Single Member Companies (SMC), ensuring compliance with
+                        the legal framework set forth by the Securities and
+                        Exchange Commission of Pakistan (SECP).
                     </p>
                 </div>
             </section>
 
-            {/* Benefits */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Key Advantages
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Benefits of a Single Member Company
                 </h2>
 

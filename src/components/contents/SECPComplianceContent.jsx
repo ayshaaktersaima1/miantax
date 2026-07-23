@@ -75,13 +75,8 @@ const supportServices = [
 const SECPComplianceContent = () => {
     return (
         <article className="min-w-0 space-y-8">
-            {/* Overview */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    SECP Compliance
-                </p>
-
-                <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h1 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Overview
                 </h1>
 
@@ -93,30 +88,23 @@ const SECPComplianceContent = () => {
                         (SECP) is the regulatory authority overseeing corporate
                         sector compliance in Pakistan. All registered companies,
                         including Private Limited, Single Member, and Public
-                        Limited, must adhere to the SECP&apos;s regulations to
-                        ensure transparency, accountability, and good governance.
-                        Compliance with SECP regulations is crucial for maintaining
-                        a company&apos;s legal status and avoiding penalties.
+                        Limited, must adhere to the SECP’s regulations to ensure
+                        transparency, accountability, and good governance.
+                        Compliance with SECP regulations is crucial for
+                        maintaining a company’s legal status and avoiding
+                        penalties.
                     </p>
 
                     <p className="text-base leading-8 text-[#455468]">
-                        At{" "}
-                        <strong className="font-semibold text-[#061D3A]">
-                            MIAN TAX ASSOCIATES
-                        </strong>
-                        , we provide expert guidance on SECP compliance, helping
-                        businesses navigate regulatory requirements efficiently.
+                        At MIAN TAX ASSOCIATES, we provide expert guidance on
+                        SECP compliance, helping businesses navigate regulatory
+                        requirements efficiently.
                     </p>
                 </div>
             </section>
 
-            {/* Compliance requirements */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Regulatory Obligations
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Key Compliance Requirements
                 </h2>
 
@@ -133,30 +121,21 @@ const SECPComplianceContent = () => {
                 </div>
             </section>
 
-            {/* How we can help */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Our Support
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     How We Can Help
                 </h2>
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <p className="mt-6 text-base leading-8 text-[#455468]">
-                    At{" "}
-                    <strong className="font-semibold text-[#061D3A]">
-                        MIAN TAX ASSOCIATES
-                    </strong>
-                    , we offer comprehensive compliance services to assist
-                    businesses in meeting their SECP obligations, including:
+                    At MIAN TAX ASSOCIATES, we offer comprehensive compliance
+                    services to assist businesses in meeting their SECP
+                    obligations, including:
                 </p>
 
                 <div className="mt-7">
-
-                    <HelpCard services={supportServices}></HelpCard>
+                    <HelpCard services={supportServices} />
                 </div>
             </section>
         </article>

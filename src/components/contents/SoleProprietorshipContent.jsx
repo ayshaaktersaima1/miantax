@@ -2,7 +2,6 @@ import BigRoundNumCard from "../serviceContentsCard/BigRoundNumCard";
 import CheckNumCard from "../serviceContentsCard/CheckNumCard";
 import HelpCard from "../serviceContentsCard/HelpCard";
 
-
 const benefits = [
     {
         title: "Ease of Formation",
@@ -40,7 +39,7 @@ const registrationSteps = [
     {
         title: "Choose a Business Name",
         description:
-            "The first step is selecting a unique business name. Conducting a name search is advisable to ensure that the chosen name is not already in use. Our team can assist in checking name availability and ensuring compliance with regulations.",
+            "The first step is selecting a unique business name. Conducting a name search is advisable to ensure that the chosen name is not already in use. Our team can assist in checking name Availability and ensuring compliance with regulations.",
     },
     {
         title: "Obtain Necessary Licenses and Permits",
@@ -50,7 +49,7 @@ const registrationSteps = [
     {
         title: "Register for Taxation",
         description:
-            "You must register with the Federal Board of Revenue (FBR) to obtain a National Tax Number (NTN). This registration is essential for tax purposes and enables you to operate your business legally. We provide support in the tax registration process.",
+            "you must register with the Federal Board of Revenue (FBR) to obtain a National Tax Number (NTN). This registration is essential for tax purposes and enables you to operate your business legally. We provide support in the tax registration process.",
     },
     {
         title: "Open a Business Bank Account",
@@ -90,13 +89,8 @@ const supportServices = [
 const SoleProprietorshipContent = () => {
     return (
         <article className="min-w-0 space-y-8">
-            {/* Overview */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Sole Proprietorship
-                </p>
-
-                <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h1 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Overview
                 </h1>
 
@@ -106,33 +100,24 @@ const SoleProprietorshipContent = () => {
                     <p className="text-base leading-8 text-[#455468]">
                         A Sole Proprietorship is the simplest form of business
                         structure in Pakistan. It allows an individual to operate
-                        a business under their own name without forming a separate
-                        legal entity. Due to its ease of setup and minimal
-                        regulatory requirements, this structure is particularly
-                        popular among freelancers, consultants, and small business
-                        owners.
+                        a business under their own name without forming a
+                        separate legal entity. Due to its ease of setup and
+                        minimal regulatory requirements, this structure is
+                        particularly popular among freelancers, consultants, and
+                        small business owners.
                     </p>
 
                     <p className="text-base leading-8 text-[#455468]">
-                        At{" "}
-                        <strong className="font-semibold text-[#061D3A]">
-                            MIAN TAX ASSOCIATES
-                        </strong>
-                        , we provide guidance and assistance to help you establish
-                        a Sole Proprietorship, ensure compliance with local
-                        regulations, and facilitate a smooth start to your business
-                        journey.
+                        At MIAN TAX ASSOCIATES, we provide guidance and
+                        assistance to help you establish a Sole Proprietorship,
+                        ensure compliance with local regulations, and facilitate
+                        a smooth start to your business journey.
                     </p>
                 </div>
             </section>
 
-            {/* Benefits */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Key Advantages
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Benefits of a Sole Proprietorship
                 </h2>
 
@@ -149,13 +134,8 @@ const SoleProprietorshipContent = () => {
                 </div>
             </section>
 
-            {/* Registration steps */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Registration Process
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Steps for Registering a Sole Proprietorship
                 </h2>
 
@@ -172,29 +152,21 @@ const SoleProprietorshipContent = () => {
                 </div>
             </section>
 
-            {/* How we can help */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Our Support
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     How We Can Help
                 </h2>
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <p className="mt-6 text-base leading-8 text-[#455468]">
-                    At{" "}
-                    <strong className="font-semibold text-[#061D3A]">
-                        MIAN TAX ASSOCIATES
-                    </strong>
-                    , we offer a range of services to assist with Sole
-                    Proprietorship registration and ongoing support, including:
+                    At MIAN TAX ASSOCIATES, we offer a range of services to
+                    assist with Sole Proprietorship registration and ongoing
+                    support, including:
                 </p>
 
                 <div className="mt-7">
-                    <HelpCard services={supportServices}></HelpCard>
+                    <HelpCard services={supportServices} />
                 </div>
             </section>
         </article>

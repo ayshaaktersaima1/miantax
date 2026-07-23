@@ -1,6 +1,5 @@
 import CheckNumCard from "../serviceContentsCard/CheckNumCard";
 
-
 const benefits = [
     {
         title: "Limited Liability",
@@ -32,13 +31,8 @@ const benefits = [
 const PrivateLimitedContent = () => {
     return (
         <article className="min-w-0 space-y-8">
-            {/* Overview */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Private Limited Company
-                </p>
-
-                <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h1 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Overview
                 </h1>
 
@@ -49,34 +43,26 @@ const PrivateLimitedContent = () => {
                         A Private Limited Company (Pvt. Ltd.) is the most popular
                         choice for small and medium-sized businesses in Pakistan,
                         thanks to its flexibility, limited liability protection,
-                        and simplified management structure. This type of company
-                        restricts the transfer of shares. It limits the number of
-                        shareholders, making it an attractive and secure option for
-                        entrepreneurs looking to mitigate personal risk while
-                        benefiting from a formal business structure.
+                        and simplified management structure. This type of
+                        company restricts the transfer of shares. It limits the
+                        number of shareholders, making it an attractive and
+                        secure option for entrepreneurs looking to mitigate
+                        personal risk while benefiting from a formal business
+                        structure.
                     </p>
 
                     <p className="text-base leading-8 text-[#455468]">
-                        At{" "}
-                        <strong className="font-semibold text-[#061D3A]">
-                            MIAN TAX ASSOCIATES
-                        </strong>
-                        , we provide end-to-end assistance in registering a Private
-                        Limited Company, guiding you through every step—from
-                        choosing the right company name to ensuring full legal
-                        compliance with the Securities and Exchange Commission of
-                        Pakistan (SECP).
+                        At MIAN TAX ASSOCIATES, we provide end-to-end assistance
+                        in registering a Private Limited Company, guiding you
+                        through every step—from choosing the right company name
+                        to ensuring full legal compliance with the Securities
+                        and Exchange Commission of Pakistan (SECP).
                     </p>
                 </div>
             </section>
 
-            {/* Benefits */}
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                    Key Advantages
-                </p>
-
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
+                <h2 className="text-3xl font-semibold leading-tight text-[#061D3A] md:text-4xl">
                     Benefits of a Private Limited Company
                 </h2>
 
