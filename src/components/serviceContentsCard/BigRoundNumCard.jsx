@@ -8,17 +8,17 @@ const BigRoundNumCard = ({ step, index }) => {
                     {index + 1}
                 </span>
 
-                <h3 className="pt-1 text-lg font-semibold text-[#061D3A]">
+                <h3 className="text-lg font-semibold leading-10 text-[#061D3A]">
                     {step.title}
                 </h3>
 
-                <div className="col-span-2 mt-2 md:col-span-1 md:col-start-2">
+                <div className="col-span-2 mt-0 md:col-span-1 md:col-start-2">
                     <p className="text-base leading-7 text-[#243044]">
                         {step.description}
                     </p>
 
                     {step.points?.length > 0 && (
-                        <div className="mt-4 space-y-3">
+                        <div className="mt-3 space-y-3">
                             {step.points.map((point) => (
                                 <div
                                     key={point}
