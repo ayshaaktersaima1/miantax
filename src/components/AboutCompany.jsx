@@ -31,9 +31,9 @@ const missionItems = [
 const AboutCompany = () => {
     return (
         <section className="overflow-hidden bg-[#F8F7F4] py-20">
-            <div className="mx-auto grid w-11/12 items-center gap-16 lg:grid-cols-2">
+            <div className="mx-auto grid w-[88%] items-center gap-16 xl:grid-cols-2">
                 {/* Left image area */}
-                <div className="relative mx-auto w-full max-w-2xl pb-28">
+                <div className="relative w-full pb-28 xl:mx-auto xl:max-w-2xl">
                     {/* Main image */}
                     <div className="relative aspect-square overflow-hidden rounded-2xl">
                         <Image
@@ -60,7 +60,6 @@ const AboutCompany = () => {
 
                                 <div className="absolute inset-0 bg-black/15 transition duration-500 group-hover:bg-black/25" />
 
-                                {/* Smooth continuous play button animation */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <span className="absolute h-16 w-16 animate-pulse rounded-full bg-[#D7A332]/15" />
 
@@ -85,8 +84,7 @@ const AboutCompany = () => {
 
                         <AlertDialog.Backdrop
                             variant="blur"
-                            isDismissable
-                            isKeyboardDismissDisabled={false}
+
                             className="bg-black/75 backdrop-blur-md"
                         >
                             <AlertDialog.Container
@@ -140,7 +138,6 @@ const AboutCompany = () => {
                         make tax and business setup easier for our clients.
                     </p>
 
-                    {/* Decorative divider */}
                     <div className="my-8 flex items-center gap-6">
                         <span className="h-px flex-1 bg-gray-300" />
 
@@ -151,9 +148,8 @@ const AboutCompany = () => {
                         <span className="h-px flex-1 bg-gray-300" />
                     </div>
 
-                    {/* Vision and mission */}
                     <div className="grid gap-8 md:grid-cols-2">
-                        {/* Vision */}
+
                         <div className="md:border-r md:border-gray-200 md:pr-8">
                             <div className="mb-6 flex items-center gap-4">
                                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#061D3A] text-2xl text-[#D7A332] ring-1 ring-[#D7A332] ring-offset-4 ring-offset-[#F8F7F4]">
@@ -219,7 +215,7 @@ const AboutCompany = () => {
                     </div>
 
                     <Link
-                        href="/about"
+                        href="/about-us"
                         className="mt-9 inline-flex items-center gap-5 rounded-lg bg-[#061D3A] px-6 py-3 font-medium uppercase tracking-wider text-white transition hover:bg-[#D7A332]"
                     >
                         More About Us

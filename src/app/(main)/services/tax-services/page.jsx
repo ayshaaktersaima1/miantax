@@ -6,7 +6,7 @@ import React from 'react';
 const TaxServicesPage = () => {
     return (
         <div>
-            <PageBanner title="Copyright Registration"
+            <PageBanner title="Tax services"
                 backgroundImage="/images/AboutSec"></PageBanner>
 
             <section className="bg-[#F8F7F4] py-16 md:py-20">

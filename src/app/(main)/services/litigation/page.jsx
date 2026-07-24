@@ -6,7 +6,7 @@ import React from 'react';
 const LitigationPage = () => {
     return (
         <div>
-            <PageBanner title="Agreements and Contracts Drafting"
+            <PageBanner title="Litigation"
                 backgroundImage="/images/AboutSec"></PageBanner>
 
             <section className="bg-[#F8F7F4] py-16 md:py-20">

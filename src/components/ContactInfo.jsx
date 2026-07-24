@@ -32,7 +32,7 @@ const contactItems = [
 
 const ContactInfo = () => {
     return (
-        <div className="flex h-full flex-col justify-center lg:pl-8">
+        <div className="flex h-full flex-col justify-start lg:pl-8">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
                 Contact Us
             </p>
@@ -47,32 +47,43 @@ const ContactInfo = () => {
                 {contactItems.map((item, index) => {
                     const Icon = item.icon;
 
-                    const content = (
-                        <div className="group flex items-start gap-5">
-                            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#D7A332] bg-[#061D3A] text-2xl text-[#D7A332] shadow-md transition duration-300 group-hover:bg-[#D7A332] group-hover:text-[#061D3A]">
-                                <Icon />
-                            </span>
-
-                            <div className="pt-1">
-                                <h3 className="text-xl font-semibold text-[#061D3A]">
-                                    {item.title}
-                                </h3>
-
-                                <p className="mt-2 break-all text-sm leading-6 text-gray-600 md:text-base">
-                                    {item.value}
-                                </p>
-                            </div>
-                        </div>
-                    );
-
                     return (
                         <div key={item.id}>
                             {item.href ? (
-                                <Link href={item.href}>
-                                    {content}
+                                <Link
+                                    href={item.href}
+                                    className="group flex items-start gap-5"
+                                >
+                                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#D7A332] bg-[#061D3A] text-2xl text-[#D7A332] shadow-md transition duration-300 group-hover:bg-[#D7A332] group-hover:text-[#061D3A]">
+                                        <Icon />
+                                    </span>
+
+                                    <div className="pt-1">
+                                        <h3 className="text-xl font-semibold text-[#061D3A]">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="mt-2 break-all text-sm leading-6 text-gray-600 md:text-base">
+                                            {item.value}
+                                        </p>
+                                    </div>
                                 </Link>
                             ) : (
-                                content
+                                <div className="flex items-start gap-5">
+                                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#D7A332] bg-[#061D3A] text-2xl text-[#D7A332] shadow-md">
+                                        <Icon />
+                                    </span>
+
+                                    <div className="pt-1">
+                                        <h3 className="text-xl font-semibold text-[#061D3A]">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="mt-2 break-all text-sm leading-6 text-gray-600 md:text-base">
+                                            {item.value}
+                                        </p>
+                                    </div>
+                                </div>
                             )}
 
                             {index !== contactItems.length - 1 && (

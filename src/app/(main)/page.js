@@ -1,6 +1,7 @@
 
 import AboutCompany from "@/components/AboutCompany";
 import Banner from "@/components/Banner";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 import NumbersSection from "@/components/NumberSection";
 import OurServices from "@/components/OurServices";
 import ReviewSection from "@/components/ReviewSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <OurServices></OurServices>
       <ReviewSection></ReviewSection>
       <TaxCtaSection></TaxCtaSection>
+      <CaseStudiesSection></CaseStudiesSection>
     </div>
   );
 }

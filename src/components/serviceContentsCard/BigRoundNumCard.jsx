@@ -3,17 +3,17 @@ import { FiFileText } from "react-icons/fi";
 const BigRoundNumCard = ({ step, index }) => {
     return (
         <div className="rounded-2xl border border-gray-200 p-5">
-            <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#061D3A] text-sm font-semibold text-[#D7A332]">
+            <div className="grid grid-cols-[40px_1fr] gap-x-4">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#061D3A] text-sm font-semibold text-[#D7A332]">
                     {index + 1}
                 </span>
 
-                <div>
-                    <h3 className="text-lg font-semibold text-[#061D3A]">
-                        {step.title}
-                    </h3>
+                <h3 className="pt-1 text-lg font-semibold text-[#061D3A]">
+                    {step.title}
+                </h3>
 
-                    <p className="mt-2 text-sm leading-7 text-[#455468] md:text-base">
+                <div className="col-span-2 mt-2 md:col-span-1 md:col-start-2">
+                    <p className="text-base leading-7 text-[#243044]">
                         {step.description}
                     </p>
 
@@ -26,7 +26,7 @@ const BigRoundNumCard = ({ step, index }) => {
                                 >
                                     <FiFileText className="mt-1 shrink-0 text-[#D7A332]" />
 
-                                    <p className="text-sm leading-6 text-[#455468]">
+                                    <p className="text-base leading-7 text-[#243044]">
                                         {point}
                                     </p>
                                 </div>

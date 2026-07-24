@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
     {
@@ -30,7 +31,6 @@ const testimonials = [
 const TestimonialCard = ({ testimonial }) => {
     return (
         <article className="relative rounded-2xl bg-white px-6 pb-6 pt-14 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-            {/* Client image */}
             <div className="absolute -top-9 left-1/2 -translate-x-1/2">
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border-4 border-[#F8F7F4] bg-white shadow-sm">
                     <Image
@@ -44,20 +44,18 @@ const TestimonialCard = ({ testimonial }) => {
             </div>
 
             <div className="text-center">
-                {/* Quote icon */}
-                <span className="block text-4xl font-semibold leading-none text-[#D7A332]/35">
-                    “
+                <span className="flex justify-center text-base text-[#D7A332]/35">
+                    <FaQuoteLeft />
                 </span>
 
-                {/* Review */}
-                <p className="mt-2 text-sm italic leading-6 text-gray-600">
-                    {testimonial.review}
-                </p>
+                <div className="flex min-h-32 items-center justify-center">
+                    <p className="text-sm italic leading-6 text-gray-600">
+                        {testimonial.review}
+                    </p>
+                </div>
 
-                {/* Divider */}
                 <div className="mx-auto mt-5 h-px w-10 bg-[#D7A332]" />
 
-                {/* Client info */}
                 <h3 className="mt-4 text-lg font-semibold text-[#061D3A]">
                     {testimonial.name}
                 </h3>
@@ -73,24 +71,28 @@ const TestimonialCard = ({ testimonial }) => {
 const ReviewSection = () => {
     return (
         <section className="bg-[#F8F7F4] py-20">
-            <div className="mx-auto w-11/12">
-                {/* Section heading */}
+            <div className="mx-auto w-[88%]">
                 <div className="mx-auto max-w-3xl text-center">
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                        Client Testimonials
-                    </p>
+                    <div className="flex items-center justify-center gap-4">
+                        <span className="h-0.5 w-10 bg-[#D7A332]" />
 
-                    <h2 className="mt-3 text-3xl font-semibold text-[#061D3A] md:text-4xl">
+                        <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
+                            Client Testimonials
+                        </p>
+
+                        <span className="h-0.5 w-10 bg-[#D7A332]" />
+                    </div>
+
+                    <h2 className="mt-3 text-3xl font-semibold text-[#061D3A] md:text-5xl">
                         What Our Clients Say About Us
                     </h2>
 
                     <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-600 md:text-base">
-                        Real experiences from clients who trusted us with their tax and
-                        business registration needs.
+                        Real experiences from clients who trusted us with their
+                        tax and business registration needs.
                     </p>
                 </div>
 
-                {/* Testimonial cards */}
                 <div className="mt-16 grid gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
                     {testimonials.map((testimonial) => (
                         <TestimonialCard

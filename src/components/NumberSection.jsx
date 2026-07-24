@@ -28,41 +28,38 @@ const stats = [
 const NumbersSection = () => {
     return (
         <section className="relative overflow-hidden bg-[url('/images/AboutSec')] bg-cover bg-center bg-fixed">
-            <div className="absolute inset-0 bg-[#061D3A]/75" />
+            <div className="absolute inset-0 bg-black/75" />
 
-            <div className="relative z-10 mx-auto w-[90%] py-12 lg:py-16">
-                <div className="grid gap-10 lg:grid-cols-[1.1fr_2.4fr] lg:items-center">
-                    {/* Left content */}
-                    <div className="text-white">
-                        <div className="mb-4 flex items-center gap-3">
+            <div className="relative z-10 mx-auto w-[88%] py-12 lg:py-16">
+                <div className="grid gap-12 lg:grid-cols-[0.8fr_2fr] lg:items-center">
+                    <div className="flex flex-col items-center text-center text-white lg:items-start lg:text-left">
+                        <div className="mb-3 flex items-center gap-3">
                             <span className="h-0.5 w-8 bg-[#D7A332]" />
 
                             <p className="text-xs font-medium uppercase tracking-widest text-[#D7A332]">
                                 Our Company In
                             </p>
+
+                            <span className="h-0.5 w-8 bg-[#D7A332] lg:hidden" />
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                        <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
                             Numbers
                         </h2>
 
-                        <p className="mt-4 max-w-xs text-sm leading-7 text-white/80">
-                            Delivering measurable results with commitment, expertise, and
-                            trust built over the years.
+                        <p className="mt-3 max-w-xs text-base leading-7 text-white/80">
+                            Delivering measurable results with commitment,
+                            expertise, and trust built over the years.
                         </p>
                     </div>
 
-                    {/* Right stats */}
-                    <div className="grid gap-8 md:grid-cols-3 md:gap-0">
-                        {stats.map((item, index) => (
+                    <div className="grid w-full gap-8 md:grid-cols-3 lg:border-l-2 lg:border-[#D7A332] lg:pl-12">
+                        {stats.map((item) => (
                             <div
                                 key={item.id}
-                                className={`flex flex-col items-center text-center text-white ${index !== stats.length - 1
-                                    ? "md:border-r md:border-white/20"
-                                    : ""
-                                    }`}
+                                className="flex flex-col items-center text-center text-white"
                             >
-                                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-[#D7A332] text-xl text-[#D7A332]">
+                                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-[#D7A332] text-xl text-[#D7A332]">
                                     {item.icon}
                                 </div>
 

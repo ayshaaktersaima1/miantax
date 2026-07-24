@@ -1,27 +1,26 @@
-import ContactForm from '@/components/ContactForm';
-import ContactInfo from '@/components/ContactInfo';
-import MapSection from '@/components/MapSection';
-import PageBanner from '@/components/PageBanner';
-import Link from 'next/link';
-import React from 'react';
-import { FiChevronRight } from 'react-icons/fi';
+import ContactForm from "@/components/ContactForm";
+import ContactInfo from "@/components/ContactInfo";
+import MapSection from "@/components/MapSection";
+import PageBanner from "@/components/PageBanner";
 
-const page = () => {
+const Page = () => {
     return (
         <div>
-            <PageBanner title="Contact Us"
-                backgroundImage="/images/AboutSec"></PageBanner>
+            <PageBanner
+                title="Contact Us"
+                backgroundImage="/images/AboutSec"
+            />
 
-            <section className=" py-16 md:py-20">
-                <div className="mx-auto grid w-11/12 gap-12 lg:grid-cols-[1.35fr_0.85fr] lg:items-center">
+            <section className="py-16 md:py-20">
+                <div className="mx-auto grid w-[88%] items-start gap-12 lg:grid-cols-[1.35fr_0.85fr]">
                     <ContactForm />
                     <ContactInfo />
                 </div>
             </section>
 
-            <MapSection></MapSection>
+            <MapSection />
         </div>
     );
 };
 
-export default page;
+export default Page;

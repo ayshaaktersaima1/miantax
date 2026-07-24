@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Button, Dropdown, Label } from "@heroui/react";
-
 import { IoCallOutline } from "react-icons/io5";
 import {
     IoIosArrowDown,
@@ -123,11 +121,17 @@ const serviceItems = [
 const Navbar = () => {
     const pathname = usePathname();
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeDesktopSubmenu, setActiveDesktopSubmenu] =
+        useState(null);
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] =
+        useState(false);
+
     const [isMobileServicesOpen, setIsMobileServicesOpen] =
         useState(false);
-    const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
+
+    const [openMobileSubmenu, setOpenMobileSubmenu] =
+        useState(null);
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
@@ -159,9 +163,16 @@ const Navbar = () => {
         );
     };
 
+    const navLinkClass = (href) => {
+        return `text-base font-medium transition hover:text-[#D7A332] ${pathname === href
+            ? "text-[#D7A332]"
+            : "text-[#061D3A]"
+            }`;
+    };
+
     return (
-        <nav className="sticky top-0 z-50 mx-auto -mt-12 w-[96%] rounded-3xl bg-white shadow-lg">
-            <div className="px-4 lg:px-6">
+        <nav className="sticky top-0 z-50 mx-auto -mt-12 w-full rounded-3xl bg-white shadow-lg lg:w-[96%]">
+            <div className="w-[88vw] mx-auto">
                 <div className="flex h-20 items-center justify-between lg:h-24">
                     <Link href="/" onClick={closeMobileMenu}>
                         <Image
@@ -177,199 +188,166 @@ const Navbar = () => {
                     <div className="hidden items-center gap-6 lg:flex">
                         <Link
                             href="/"
-                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/"
-                                    ? "text-[#D7A332]"
-                                    : "text-[#061D3A]"
-                                }`}
+                            className={navLinkClass("/")}
                         >
                             Home
                         </Link>
 
                         <Link
                             href="/about-us"
-                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/about-us"
-                                    ? "text-[#D7A332]"
-                                    : "text-[#061D3A]"
-                                }`}
+                            className={navLinkClass("/about-us")}
                         >
                             About Us
                         </Link>
 
-                        <div onMouseEnter={() => setIsOpen(true)}>
-                            <Dropdown
-                                isOpen={isOpen}
-                                onOpenChange={setIsOpen}
+                        <div className="group/services relative">
+                            <Link
+                                href="/services"
+                                className={`flex items-center gap-1 text-base font-medium transition hover:text-[#D7A332] ${pathname === "/services"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
+                                    }`}
                             >
-                                <Button
-                                    aria-label="Services"
-                                    variant="secondary"
-                                    className="flex min-w-0 items-center gap-1 bg-transparent p-0 font-medium text-[#061D3A] shadow-none hover:bg-transparent hover:text-[#D7A332]"
-                                >
-                                    Services
+                                Services
 
-                                    <IoIosArrowDown
-                                        className={`transition-transform ${isOpen ? "rotate-180" : ""
-                                            }`}
-                                    />
-                                </Button>
+                                <IoIosArrowDown className="transition-transform group-hover/services:rotate-180" />
+                            </Link>
 
-                                <Dropdown.Popover
-                                    placement="bottom"
-                                    className="w-80 rounded-xl bg-[#061D3A] p-2"
-                                >
-                                    <Dropdown.Menu>
-                                        {serviceItems.map((service) =>
-                                            service.submenu ? (
-                                                <Dropdown.SubmenuTrigger
-                                                    key={service.href}
-                                                >
-                                                    <Dropdown.Item
-                                                        id={service.label}
-                                                        textValue={
-                                                            service.label
-                                                        }
-                                                        className={`group rounded-lg ${isServiceActive(
-                                                            service
-                                                        )
+                            <div
+                                onMouseLeave={() =>
+                                    setActiveDesktopSubmenu(null)
+                                }
+                                className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition group-hover/services:visible group-hover/services:opacity-100"
+                            >
+                                <div className="relative">
+                                    <div className="w-80 rounded-xl bg-[#061D3A] p-2 shadow-lg">
+                                        <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
+                                            {serviceItems.map(
+                                                (service) =>
+                                                    service.submenu ? (
+                                                        <Link
+                                                            key={
+                                                                service.href
+                                                            }
+                                                            href={
+                                                                service.href
+                                                            }
+                                                            onMouseEnter={() =>
+                                                                setActiveDesktopSubmenu(
+                                                                    service
+                                                                )
+                                                            }
+                                                            className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition ${isServiceActive(
+                                                                service
+                                                            )
                                                                 ? "bg-white text-[#061D3A]"
                                                                 : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                            }`}
-                                                    >
-                                                        <div className="flex w-full items-center justify-between">
-                                                            <Label className="text-inherit">
+                                                                }`}
+                                                        >
+                                                            <span>
                                                                 {
                                                                     service.label
                                                                 }
-                                                            </Label>
+                                                            </span>
 
-                                                            <IoIosArrowForward className="text-inherit" />
-                                                        </div>
-                                                    </Dropdown.Item>
-
-                                                    <Dropdown.Popover
-                                                        placement="right top"
-                                                        className="w-80 rounded-xl bg-[#061D3A] p-2"
-                                                    >
-                                                        <Dropdown.Menu>
-                                                            <Dropdown.Item
-                                                                id={
-                                                                    service.href
-                                                                }
-                                                                textValue={
-                                                                    service.label
-                                                                }
-                                                                className={`rounded-lg ${pathname ===
-                                                                        service.href
-                                                                        ? "bg-white text-[#061D3A]"
-                                                                        : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                                    }`}
-                                                            >
-                                                                <Link
-                                                                    href={
-                                                                        service.href
-                                                                    }
-                                                                    onClick={() =>
-                                                                        setIsOpen(
-                                                                            false
-                                                                        )
-                                                                    }
-                                                                    className="block w-full text-inherit"
-                                                                >
-                                                                    <Label className="text-inherit">
-                                                                        {
-                                                                            service.label
-                                                                        }
-                                                                    </Label>
-                                                                </Link>
-                                                            </Dropdown.Item>
-
-                                                            {service.submenu.map(
-                                                                (subItem) => (
-                                                                    <Dropdown.Item
-                                                                        key={
-                                                                            subItem.href
-                                                                        }
-                                                                        id={
-                                                                            subItem.href
-                                                                        }
-                                                                        textValue={
-                                                                            subItem.label
-                                                                        }
-                                                                        className={`rounded-lg ${pathname ===
-                                                                                subItem.href
-                                                                                ? "bg-white text-[#061D3A]"
-                                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                                            }`}
-                                                                    >
-                                                                        <Link
-                                                                            href={
-                                                                                subItem.href
-                                                                            }
-                                                                            onClick={() =>
-                                                                                setIsOpen(
-                                                                                    false
-                                                                                )
-                                                                            }
-                                                                            className="block w-full text-inherit"
-                                                                        >
-                                                                            <Label className="text-inherit">
-                                                                                {
-                                                                                    subItem.label
-                                                                                }
-                                                                            </Label>
-                                                                        </Link>
-                                                                    </Dropdown.Item>
+                                                            <IoIosArrowForward className="shrink-0" />
+                                                        </Link>
+                                                    ) : (
+                                                        <Link
+                                                            key={
+                                                                service.href
+                                                            }
+                                                            href={
+                                                                service.href
+                                                            }
+                                                            onMouseEnter={() =>
+                                                                setActiveDesktopSubmenu(
+                                                                    null
                                                                 )
-                                                            )}
-                                                        </Dropdown.Menu>
-                                                    </Dropdown.Popover>
-                                                </Dropdown.SubmenuTrigger>
-                                            ) : (
-                                                <Dropdown.Item
-                                                    key={service.href}
-                                                    id={service.href}
-                                                    textValue={service.label}
-                                                    className={`rounded-lg ${pathname ===
-                                                            service.href
+                                                            }
+                                                            className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
+                                                                service.href
+                                                                ? "bg-white text-[#061D3A]"
+                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                }`}
+                                                        >
+                                                            {
+                                                                service.label
+                                                            }
+                                                        </Link>
+                                                    )
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {activeDesktopSubmenu && (
+                                        <div
+                                            className={`absolute left-full z-50 w-80 pl-2 ${activeDesktopSubmenu.label ===
+                                                "Litigation" ||
+                                                activeDesktopSubmenu.label ===
+                                                "Tax Services"
+                                                ? "bottom-0"
+                                                : "top-0"
+                                                }`}
+                                        >
+                                            <div className="w-80 rounded-xl bg-[#061D3A] p-2 shadow-lg">
+                                                <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
+                                                    <Link
+                                                        href={
+                                                            activeDesktopSubmenu.href
+                                                        }
+                                                        className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
+                                                            activeDesktopSubmenu.href
                                                             ? "bg-white text-[#061D3A]"
                                                             : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                        }`}
-                                                >
-                                                    <Link
-                                                        href={service.href}
-                                                        onClick={() =>
-                                                            setIsOpen(false)
-                                                        }
-                                                        className="block w-full text-inherit"
+                                                            }`}
                                                     >
-                                                        <Label className="text-inherit">
-                                                            {service.label}
-                                                        </Label>
+                                                        {
+                                                            activeDesktopSubmenu.label
+                                                        }
                                                     </Link>
-                                                </Dropdown.Item>
-                                            )
-                                        )}
-                                    </Dropdown.Menu>
-                                </Dropdown.Popover>
-                            </Dropdown>
+
+                                                    {activeDesktopSubmenu.submenu.map(
+                                                        (
+                                                            subItem
+                                                        ) => (
+                                                            <Link
+                                                                key={
+                                                                    subItem.href
+                                                                }
+                                                                href={
+                                                                    subItem.href
+                                                                }
+                                                                className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
+                                                                    subItem.href
+                                                                    ? "bg-white text-[#061D3A]"
+                                                                    : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                    }`}
+                                                            >
+                                                                {
+                                                                    subItem.label
+                                                                }
+                                                            </Link>
+                                                        )
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                         </div>
 
                         <Link
                             href="/blog"
-                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/blog"
-                                    ? "text-[#D7A332]"
-                                    : "text-[#061D3A]"
-                                }`}
+                            className={navLinkClass("/blog")}
                         >
                             Blog
                         </Link>
 
                         <Link
                             href="/contact-us"
-                            className={`font-medium transition hover:text-[#D7A332] ${pathname === "/contact-us"
-                                    ? "text-[#D7A332]"
-                                    : "text-[#061D3A]"
-                                }`}
+                            className={navLinkClass("/contact-us")}
                         >
                             Contact Us
                         </Link>
@@ -384,27 +362,35 @@ const Navbar = () => {
                             className="text-[#D7A332]"
                         />
 
-                        <p className="font-semibold">0300-0053038</p>
+                        <p className="font-semibold">
+                            0300-0053038
+                        </p>
                     </Link>
 
                     <button
                         type="button"
                         aria-label="Toggle navigation menu"
                         onClick={() =>
-                            setIsMobileMenuOpen((current) => !current)
+                            setIsMobileMenuOpen(
+                                (current) => !current
+                            )
                         }
                         className="text-3xl text-[#061D3A] lg:hidden"
                     >
-                        {isMobileMenuOpen ? <IoMdClose /> : <IoMdMenu />}
+                        {isMobileMenuOpen ? (
+                            <IoMdClose />
+                        ) : (
+                            <IoMdMenu />
+                        )}
                     </button>
                 </div>
 
                 {isMobileMenuOpen && (
-                    <div className="border-t border-gray-200 pb-5 lg:hidden">
+                    <div className="max-h-[80vh] overflow-y-auto overscroll-contain border-t border-gray-200 pb-5 lg:hidden">
                         <Link
                             href="/"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
                         >
                             Home
                         </Link>
@@ -412,7 +398,7 @@ const Navbar = () => {
                         <Link
                             href="/about-us"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
                         >
                             About Us
                         </Link>
@@ -425,14 +411,14 @@ const Navbar = () => {
                                         (current) => !current
                                     )
                                 }
-                                className="flex w-full items-center justify-between py-4 font-medium text-[#061D3A]"
+                                className="flex w-full items-center justify-between py-4 text-base font-medium text-[#061D3A]"
                             >
                                 Services
 
                                 <IoIosArrowDown
                                     className={`transition-transform ${isMobileServicesOpen
-                                            ? "rotate-180"
-                                            : ""
+                                        ? "rotate-180"
+                                        : ""
                                         }`}
                                 />
                             </button>
@@ -444,9 +430,6 @@ const Navbar = () => {
                                             openMobileSubmenu ===
                                             service.label;
 
-                                        const serviceActive =
-                                            isServiceActive(service);
-
                                         return (
                                             <div key={service.href}>
                                                 <Link
@@ -457,10 +440,12 @@ const Navbar = () => {
                                                             service
                                                         )
                                                     }
-                                                    className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium ${serviceActive ||
-                                                            submenuOpen
-                                                            ? "bg-white text-[#061D3A]"
-                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                    className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium ${submenuOpen ||
+                                                        isServiceActive(
+                                                            service
+                                                        )
+                                                        ? "bg-white text-[#061D3A]"
+                                                        : "text-white"
                                                         }`}
                                                 >
                                                     <span>
@@ -469,9 +454,9 @@ const Navbar = () => {
 
                                                     {service.submenu && (
                                                         <IoIosArrowForward
-                                                            className={`transition-transform ${submenuOpen
-                                                                    ? "rotate-90"
-                                                                    : ""
+                                                            className={`shrink-0 transition-transform ${submenuOpen
+                                                                ? "rotate-90"
+                                                                : ""
                                                                 }`}
                                                         />
                                                     )}
@@ -495,9 +480,9 @@ const Navbar = () => {
                                                                             closeMobileMenu
                                                                         }
                                                                         className={`block rounded-lg px-4 py-3 text-sm font-medium ${pathname ===
-                                                                                subItem.href
-                                                                                ? "bg-white text-[#061D3A]"
-                                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                            subItem.href
+                                                                            ? "bg-white text-[#061D3A]"
+                                                                            : "text-white"
                                                                             }`}
                                                                     >
                                                                         {
@@ -518,7 +503,7 @@ const Navbar = () => {
                         <Link
                             href="/blog"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
                         >
                             Blog
                         </Link>
@@ -526,7 +511,7 @@ const Navbar = () => {
                         <Link
                             href="/contact-us"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 font-medium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
                         >
                             Contact Us
                         </Link>

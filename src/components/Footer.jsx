@@ -20,7 +20,7 @@ const quickLinks = [
     },
     {
         label: "About Us",
-        href: "/about",
+        href: "/about-us",
     },
     {
         label: "Services",
@@ -32,7 +32,7 @@ const quickLinks = [
     },
     {
         label: "Contact Us",
-        href: "/contact",
+        href: "/contact-us",
     },
 ];
 
@@ -43,11 +43,11 @@ const serviceLinks = [
     },
     {
         label: "Partnership Registration (AOP)",
-        href: "/services/partnership-registration",
+        href: "/services/partnership-registration-aop",
     },
     {
         label: "Limited Liability Partnership (LLP)",
-        href: "/services/limited-liability-partnership",
+        href: "/services/limited-liability-partnershipllp",
     },
     {
         label: "PSEB Registration",
@@ -66,6 +66,10 @@ const serviceLinks = [
         href: "/services/trademark-registration",
     },
     {
+        label: "Copyright Registration",
+        href: "/services/copyright-registration",
+    },
+    {
         label: "Agreements and Contracts Drafting",
         href: "/services/agreements-and-contracts-drafting",
     },
@@ -77,6 +81,10 @@ const serviceLinks = [
         label: "Tax Services",
         href: "/services/tax-services",
     },
+    {
+        label: "Filer",
+        href: "/services/filer",
+    },
 ];
 
 const FooterLink = ({ href, children }) => {
@@ -84,7 +92,7 @@ const FooterLink = ({ href, children }) => {
         <li>
             <Link
                 href={href}
-                className="group flex items-center gap-2 text-sm text-white/70 transition duration-300 hover:text-white"
+                className="group flex items-center gap-2 text-base text-white/70 transition duration-300 hover:text-white"
             >
                 <FiChevronRight className="shrink-0 text-[#D7A332] transition duration-300 group-hover:translate-x-1" />
 
@@ -107,18 +115,16 @@ const FooterHeading = ({ children }) => {
 };
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+
 
     return (
         <footer className="bg-[#061D3A] text-white">
-            {/* Main footer */}
-            <div className="mx-auto grid w-11/12 gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.2fr_1fr] lg:gap-10">
-                {/* Company information */}
+            <div className="mx-auto grid w-[88%] gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.2fr_1fr] lg:gap-10">
                 <div className="lg:border-r lg:border-white/10 lg:pr-10">
                     <Link
                         href="/"
-                        className="inline-block"
                         aria-label="Mian Tax Associates homepage"
+                        className="inline-block"
                     >
                         <Image
                             src="/images/whiteLogoo.png"
@@ -131,12 +137,12 @@ const Footer = () => {
 
                     <div className="mt-6 h-0.5 w-12 bg-[#D7A332]" />
 
-                    <p className="mt-6 max-w-sm text-sm leading-7 text-white/65">
+                    <p className="mt-6 max-w-sm text-base leading-7 text-white/65">
                         Our firm provides expert tax and business registration
                         services, including company setup, NTN registration, and
-                        compliance solutions. We offer affordable, reliable guidance
-                        to ensure compliance, save time, and help businesses grow
-                        seamlessly in Pakistan.
+                        compliance solutions. We offer affordable, reliable
+                        guidance to ensure compliance, save time, and help
+                        businesses grow seamlessly in Pakistan.
                     </p>
 
                     <div className="mt-7 flex items-center gap-3">
@@ -162,9 +168,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Quick links */}
                 <div>
-                    <FooterHeading>Quick Links</FooterHeading>
+                    <FooterHeading>
+                        Quick Links
+                    </FooterHeading>
 
                     <ul className="mt-6 space-y-4">
                         {quickLinks.map((item) => (
@@ -178,9 +185,10 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Services */}
                 <div className="lg:border-r lg:border-white/10 lg:pr-10">
-                    <FooterHeading>Services</FooterHeading>
+                    <FooterHeading>
+                        Services
+                    </FooterHeading>
 
                     <ul className="mt-6 space-y-3">
                         {serviceLinks.map((item) => (
@@ -194,9 +202,10 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact information */}
                 <div>
-                    <FooterHeading>Contact Us</FooterHeading>
+                    <FooterHeading>
+                        Contact Us
+                    </FooterHeading>
 
                     <div className="mt-6 space-y-6">
                         <Link
@@ -252,8 +261,8 @@ const Footer = () => {
                                 </p>
 
                                 <p className="mt-1 text-sm leading-6 text-white/65">
-                                    Suit No. 202 2nd Floor Dewan Centre 5 Temple Road
-                                    Lahore
+                                    Suit No. 202 2nd Floor Dewan Centre 5 Temple
+                                    Road Lahore
                                 </p>
                             </div>
                         </div>
@@ -261,15 +270,12 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom footer */}
             <div className="border-t border-white/10">
-                <div className="mx-auto flex w-11/12 flex-col items-center justify-between gap-4 py-6 text-center md:flex-row md:text-left">
+                <div className="mx-auto flex w-[88%] flex-col items-center justify-between gap-4 py-6 text-center md:flex-row md:text-left">
                     <p className="text-sm text-white/55">
-                        © {currentYear}{" "}
-                        <span className="font-medium text-[#D7A332]">
+                        © 2026 <span className="font-medium text-[#D7A332]">
                             Mian Tax Associates.
-                        </span>{" "}
-                        All Rights Reserved.
+                        </span> All Rights Reserved.
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-5 text-sm text-white/55">

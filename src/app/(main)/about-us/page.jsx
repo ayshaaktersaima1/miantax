@@ -13,7 +13,7 @@ const AboutUs = () => {
             <AboutCompany></AboutCompany>
             <NumbersSection></NumbersSection>
             <ReviewSection></ReviewSection>
-            <TaxCtaSection></TaxCtaSection>
+
         </div>
     );
 };

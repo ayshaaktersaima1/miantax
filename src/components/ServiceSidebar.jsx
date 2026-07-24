@@ -10,26 +10,32 @@ import {
 
 import { FiSend } from "react-icons/fi";
 
-const ServiceSidebar = ({ children }) => {
+const ServiceSidebar = () => {
+    const inputClassName =
+        "w-full rounded-lg border border-white/20 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#D7A332]";
+
     return (
         <aside className="space-y-6">
-            {/* Contact callout */}
-            <div className="relative overflow-hidden rounded-3xl bg-[#3B4F68] px-8 py-12 text-center text-white shadow-lg">
-                <p className="text-2xl font-semibold leading-tight md:text-3xl">
-                    Having trouble managing your taxes?
-                </p>
-                <div className="mt-7 flex items-center justify-center gap-3">
-                    <span className="h-px w-8 bg-[#D7A332]" />
+            <div className="relative overflow-hidden rounded-3xl bg-[url('/images/tax-cta')] bg-cover bg-center px-8 py-12 text-center text-white shadow-lg">
+                <div className="absolute inset-0 bg-black/75" />
 
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
-                        Contact Us Now
+                <div className="relative z-10">
+                    <p className="text-2xl font-semibold leading-tight md:text-3xl">
+                        Having trouble managing your taxes?
                     </p>
 
-                    <span className="h-px w-8 bg-[#D7A332]" />
+                    <div className="mt-7 flex items-center justify-center gap-3">
+                        <span className="h-px w-8 bg-[#D7A332]" />
+
+                        <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
+                            Contact Us Now
+                        </p>
+
+                        <span className="h-px w-8 bg-[#D7A332]" />
+                    </div>
                 </div>
             </div>
 
-            {/* Quote form */}
             <div className="rounded-3xl bg-[#061D3A] p-6 text-white shadow-lg md:p-7">
                 <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
                     Request Assistance
@@ -47,13 +53,13 @@ const ServiceSidebar = ({ children }) => {
                         type="text"
                         className="w-full"
                     >
-                        <Label className="mb-2 block text-sm font-medium text-white/80">
+                        <Label className="mb-2 block text-sm text-white/80">
                             Name
                         </Label>
 
                         <Input
                             placeholder="Enter your name"
-                            className="h-12 w-full rounded-lg border border-white/20 bg-white/5 px-4 text-sm text-white outline-none transition placeholder:text-white/40 focus:border-[#D7A332]"
+                            className={`h-12 ${inputClassName}`}
                         />
                     </TextField>
 
@@ -62,13 +68,13 @@ const ServiceSidebar = ({ children }) => {
                         type="email"
                         className="w-full"
                     >
-                        <Label className="mb-2 block text-sm font-medium text-white/80">
+                        <Label className="mb-2 block text-sm text-white/80">
                             Email
                         </Label>
 
                         <Input
                             placeholder="Enter your email"
-                            className="h-12 w-full rounded-lg border border-white/20 bg-white/5 px-4 text-sm text-white outline-none transition placeholder:text-white/40 focus:border-[#D7A332]"
+                            className={`h-12 ${inputClassName}`}
                         />
                     </TextField>
 
@@ -76,30 +82,29 @@ const ServiceSidebar = ({ children }) => {
                         name="message"
                         className="w-full"
                     >
-                        <Label className="mb-2 block text-sm font-medium text-white/80">
+                        <Label className="mb-2 block text-sm text-white/80">
                             Message
                         </Label>
 
                         <TextArea
                             rows={5}
                             placeholder="Write your message..."
-                            className="w-full resize-none rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/40 focus:border-[#D7A332]"
+                            className={`resize-none py-3 ${inputClassName}`}
                         />
                     </TextField>
 
                     <Button
                         type="submit"
-                        className="group flex h-13 w-full items-center justify-center gap-3 rounded-lg bg-[#D7A332] font-semibold text-[#061D3A] transition duration-300 hover:bg-white"
+                        className="group flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-[#D7A332] font-semibold text-[#061D3A] hover:bg-white"
                     >
                         Send Message
 
-                        <FiSend className="transition duration-300 group-hover:translate-x-1" />
+                        <FiSend className="group-hover:translate-x-1" />
                     </Button>
                 </form>
             </div>
 
-            {/* Future sidebar content */}
-            {children}
+
         </aside>
     );
 };

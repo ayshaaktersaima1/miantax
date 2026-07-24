@@ -315,7 +315,7 @@ const CompanyRegistrationContent = () => {
     return (
         <article className="min-w-0 space-y-10">
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
-                <p className="text-base leading-8 text-[#455468]">
+                <p className="text-base leading-8 text-[#243044]">
                     Starting a business in Pakistan requires legal compliance,
                     and registering your company is the first key step. This
                     guide outlines the company registration process, the
@@ -323,7 +323,7 @@ const CompanyRegistrationContent = () => {
                     register.
                 </p>
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Company registration provides your business with legal
                     standing, credibility, and access to various benefits,
                     including:
@@ -339,7 +339,7 @@ const CompanyRegistrationContent = () => {
                                 <FiCheck />
                             </span>
 
-                            <p className="text-sm leading-6 text-[#455468] md:text-base">
+                            <p className="text-sm leading-6 text-[#243044] md:text-base">
                                 {benefit}
                             </p>
                         </div>
@@ -352,7 +352,7 @@ const CompanyRegistrationContent = () => {
                     Types of Companies You Can Register:
                 </SectionHeading>
 
-                <p className="mb-7 text-base leading-8 text-[#455468]">
+                <p className="mb-7 text-base leading-8 text-[#243044]">
                     In Pakistan, you can choose to register your company under
                     several categories, depending on your business structure
                     and needs:
@@ -366,7 +366,7 @@ const CompanyRegistrationContent = () => {
                     Process for Company Registration:
                 </SectionHeading>
 
-                <p className="mb-7 text-base leading-8 text-[#455468]">
+                <p className="mb-7 text-base leading-8 text-[#243044]">
                     The Securities and Exchange Commission of Pakistan (SECP)
                     is the governing body responsible for company registration.
                     Here’s how you can register a company in Pakistan:
@@ -388,7 +388,7 @@ const CompanyRegistrationContent = () => {
                     Post-Registration Requirements:
                 </SectionHeading>
 
-                <p className="mb-7 text-base leading-8 text-[#455468]">
+                <p className="mb-7 text-base leading-8 text-[#243044]">
                     Once your company is registered, there are a few essential
                     post-registration steps to follow:
                 </p>
@@ -419,7 +419,7 @@ const CompanyRegistrationContent = () => {
                     Overview
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     A Private Limited Company (Pvt. Ltd.) is the most popular
                     choice for small and medium-sized businesses in Pakistan,
                     thanks to its flexibility, limited liability protection,
@@ -430,7 +430,7 @@ const CompanyRegistrationContent = () => {
                     benefiting from a formal business structure.
                 </p>
 
-                <p className="mt-5 text-base leading-8 text-[#455468]">
+                <p className="mt-5 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we provide end-to-end assistance in
                     registering a Private Limited Company, guiding you through
                     every step—from choosing the right company name to ensuring
@@ -454,7 +454,7 @@ const CompanyRegistrationContent = () => {
                     Overview
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     A Single Member Company (SMC) is a unique form of business
                     entity in Pakistan designed for entrepreneurs who wish to
                     operate their business as a separate legal entity without
@@ -464,7 +464,7 @@ const CompanyRegistrationContent = () => {
                     operations.
                 </p>
 
-                <p className="mt-5 text-base leading-8 text-[#455468]">
+                <p className="mt-5 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in assisting
                     entrepreneurs with the registration and establishment of
                     Single Member Companies (SMC), ensuring compliance with the
@@ -490,7 +490,7 @@ const CompanyRegistrationContent = () => {
                     Overview
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     A Sole Proprietorship is the simplest form of business
                     structure in Pakistan. It allows an individual to operate a
                     business under their own name without forming a separate
@@ -500,7 +500,7 @@ const CompanyRegistrationContent = () => {
                     owners.
                 </p>
 
-                <p className="mt-5 text-base leading-8 text-[#455468]">
+                <p className="mt-5 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we provide guidance and assistance
                     to help you establish a Sole Proprietorship, ensure
                     compliance with local regulations, and facilitate a smooth
@@ -527,7 +527,7 @@ const CompanyRegistrationContent = () => {
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
                 <SectionHeading>How We Can Help</SectionHeading>
 
-                <p className="mb-7 text-base leading-8 text-[#455468]">
+                <p className="mb-7 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer a range of services to
                     assist with Sole Proprietorship registration and ongoing
                     support, including:
@@ -543,7 +543,7 @@ const CompanyRegistrationContent = () => {
                     Overview
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     The Securities and Exchange Commission of Pakistan (SECP)
                     is the regulatory authority overseeing corporate sector
                     compliance in Pakistan. All registered companies, including
@@ -554,7 +554,7 @@ const CompanyRegistrationContent = () => {
                     status and avoiding penalties.
                 </p>
 
-                <p className="mt-5 text-base leading-8 text-[#455468]">
+                <p className="mt-5 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we provide expert guidance on SECP
                     compliance, helping businesses navigate regulatory
                     requirements efficiently.
@@ -572,7 +572,7 @@ const CompanyRegistrationContent = () => {
             <section className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
                 <SectionHeading>How We Can Help</SectionHeading>
 
-                <p className="mb-7 text-base leading-8 text-[#455468]">
+                <p className="mb-7 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer comprehensive compliance
                     services to assist businesses in meeting their SECP
                     obligations, including:

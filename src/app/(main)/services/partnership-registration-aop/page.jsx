@@ -6,7 +6,7 @@ import React from 'react';
 const PartnershipRegPage = () => {
     return (
         <div>
-            <PageBanner title="Sole Proprietorship"
+            <PageBanner title="Partnership Registration (AOP)"
                 backgroundImage="/images/AboutSec"></PageBanner>
 
             <section className="bg-[#F8F7F4] py-16 md:py-20">
