@@ -16,7 +16,7 @@ const ServiceSidebar = () => {
 
     return (
         <aside className="space-y-6">
-            <div className="relative overflow-hidden rounded-3xl bg-[url('/images/tax-cta')] bg-cover bg-center px-8 py-12 text-center text-white shadow-lg">
+            <div className="relative overflow-hidden rounded-3xl bg-[url('/images/tax-cta.webp')] bg-cover bg-center px-8 py-12 text-center text-white shadow-lg">
                 <div className="absolute inset-0 bg-black/75" />
 
                 <div className="relative z-10">

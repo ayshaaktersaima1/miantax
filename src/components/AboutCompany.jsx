@@ -13,6 +13,7 @@ import {
     FiTarget,
     FiX,
 } from "react-icons/fi";
+import ScrollReveal from "./GlobalScrollReveal";
 
 const visionItems = [
     "Empowering Business Registration Success.",
@@ -33,6 +34,7 @@ const AboutCompany = () => {
         <section className="overflow-hidden bg-[#F8F7F4] py-20">
             <div className="mx-auto grid w-[88%] items-center gap-16 xl:grid-cols-2">
                 {/* Left image area */}
+
                 <div className="relative w-full pb-28 xl:mx-auto xl:max-w-2xl">
                     {/* Main image */}
                     <div className="relative aspect-square overflow-hidden rounded-2xl">

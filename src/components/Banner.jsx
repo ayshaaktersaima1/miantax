@@ -19,16 +19,20 @@ import "swiper/css/pagination";
 
 const bannerImages = [
     {
-        src: "/images/banner1.jpg",
+        src: "/images/banner1.webp",
         alt: "Tax professional reviewing financial documents",
     },
     {
-        src: "/images/banner2.jpg",
-        alt: "Business professionals discussing financial reports",
+        src: "/images/banner2.webp",
+        alt: "Tax professional reviewing financial documents",
     },
     {
-        src: "/images/banner3.avif",
-        alt: "Professional working with tax documents and calculator",
+        src: "/images/banner3.webp",
+        alt: "Tax professional reviewing financial documents",
+    },
+    {
+        src: "/images/banner4.webp",
+        alt: "Tax professional reviewing financial documents",
     },
 ];
 

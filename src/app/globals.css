@@ -31,3 +31,14 @@ body {
 .banner-swiper .swiper-slide-active .banner-image {
   animation: bannerZoom 6s ease-out forwards;
 }
+
+body {
+  font-family: var(--font-manrope);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-lora);
+}

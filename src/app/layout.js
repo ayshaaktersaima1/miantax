@@ -1,15 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Lora, Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import GlobalScrollReveal from "@/components/GlobalScrollReveal";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const lora = Lora({
   subsets: ["latin"],
+  variable: "--font-lora",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
   subsets: ["latin"],
+  variable: "--font-manrope",
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -20,9 +25,18 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${lora.variable} ${manrope.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+
+        <SmoothScroll>
+          <GlobalScrollReveal />
+
+          <main>
+            {children}
+          </main>
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

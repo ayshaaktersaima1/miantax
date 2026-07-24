@@ -8,7 +8,7 @@ const Page = () => {
         <div>
             <PageBanner
                 title="Contact Us"
-                backgroundImage="/images/AboutSec"
+                backgroundImage="/images/contactUs.webp"
             />
 
             <section className="py-16 md:py-20">

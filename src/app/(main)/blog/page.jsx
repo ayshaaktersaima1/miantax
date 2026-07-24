@@ -8,7 +8,7 @@ const BlogPage = () => {
     return (
         <div>
             <PageBanner title="Our Blog"
-                backgroundImage="/images/AboutSec"></PageBanner>
+                backgroundImage="/images/blog.webp"></PageBanner>
             <OurBlog></OurBlog>
             <TaxCtaSection></TaxCtaSection>
 

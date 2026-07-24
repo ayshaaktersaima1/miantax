@@ -8,7 +8,7 @@ const Services = () => {
     return (
         <div>
             <PageBanner title="Our Services"
-                backgroundImage="/images/AboutSec"></PageBanner>
+                backgroundImage="/images/services.webp"></PageBanner>
             <OurServices></OurServices>
             <TaxCtaSection></TaxCtaSection>
             <ReviewSection></ReviewSection>

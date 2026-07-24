@@ -9,7 +9,7 @@ const AboutUs = () => {
     return (
         <div>
             <PageBanner title="About Us"
-                backgroundImage="/images/AboutSec"></PageBanner>
+                backgroundImage="/images/aboutUs.webp"></PageBanner>
             <AboutCompany></AboutCompany>
             <NumbersSection></NumbersSection>
             <ReviewSection></ReviewSection>

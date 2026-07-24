@@ -7,7 +7,7 @@ import {
 
 const TaxCtaSection = () => {
     return (
-        <section className="relative bg-[url('/images/tax-cta')] bg-cover bg-center bg-fixed">
+        <section className="relative bg-[url('/images/tax-cta.webp')] bg-cover bg-center bg-fixed">
             <div className="absolute inset-0 bg-black/75" />
 
             <div className="relative z-10 mx-auto flex min-h-96 w-[88%] items-center justify-center py-16">

@@ -27,7 +27,7 @@ const stats = [
 
 const NumbersSection = () => {
     return (
-        <section className="relative overflow-hidden bg-[url('/images/AboutSec')] bg-cover bg-center bg-fixed">
+        <section className="relative overflow-hidden bg-[url('/images/Number.webp')] bg-cover bg-center bg-fixed">
             <div className="absolute inset-0 bg-black/75" />
 
             <div className="relative z-10 mx-auto w-[88%] py-12 lg:py-16">
