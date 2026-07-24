@@ -90,7 +90,7 @@ const TaxServicesContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Tax services encompass a range of professional assistance
                     provided to individuals and businesses to navigate the
                     complexities of Pakistan’s tax laws and regulations. These

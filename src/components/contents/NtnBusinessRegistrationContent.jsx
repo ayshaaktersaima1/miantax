@@ -92,7 +92,7 @@ const NtnBusinessRegistrationContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         In Pakistan, obtaining a National Tax Number (NTN) and
                         registering your business are essential steps for
                         operating legally and efficiently. The NTN is a unique
@@ -104,7 +104,7 @@ const NtnBusinessRegistrationContent = () => {
                         protecting your interests.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide comprehensive
                         services to assist you in obtaining your NTN and
                         registering your business, ensuring a smooth and
@@ -120,7 +120,7 @@ const NtnBusinessRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     The National Tax Number (NTN) is a unique identifier assigned
                     to taxpayers in Pakistan for tax purposes. It is mandatory
                     for individuals and entities that wish to engage in any
@@ -148,7 +148,7 @@ const NtnBusinessRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Business registration involves formally registering your
                     business entity with the relevant authorities. The process
                     varies depending on the type of business structure you
@@ -182,7 +182,7 @@ const NtnBusinessRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive services for NTN and business registration,
                     offering:

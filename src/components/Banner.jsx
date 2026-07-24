@@ -136,7 +136,7 @@ const Banner = () => {
 
                                 <div className="my-2 h-0.5 w-10 bg-[#D7A332]" />
 
-                                <p className="text-sm leading-6 text-[#455468]">
+                                <p className="text-sm leading-6 text-[#243044]">
                                     Efficient tax solutions that save you time
                                     and maximize savings.
                                 </p>
@@ -155,7 +155,7 @@ const Banner = () => {
 
                                 <div className="my-2 h-0.5 w-10 bg-[#D7A332]" />
 
-                                <p className="text-sm leading-6 text-[#455468]">
+                                <p className="text-sm leading-6 text-[#243044]">
                                     Affordable tax consulting designed for
                                     maximum savings and efficiency.
                                 </p>

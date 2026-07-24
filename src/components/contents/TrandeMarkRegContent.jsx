@@ -134,7 +134,7 @@ const TrademarkRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Trademark Registration is the legal process through which a
                     business secures exclusive rights to its brand name, logo,
                     slogan, or any distinctive sign that identifies its goods or
@@ -225,7 +225,7 @@ const TrademarkRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in assisting
                     businesses with trademark registration, offering:
                 </p>

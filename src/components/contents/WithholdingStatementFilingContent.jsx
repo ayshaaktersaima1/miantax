@@ -103,7 +103,7 @@ const WithholdingStatementFilingContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         Withholding Statement Filing is a crucial process for
                         employers and businesses in Pakistan, ensuring compliance
                         with tax regulations set by the Federal Board of Revenue
@@ -114,7 +114,7 @@ const WithholdingStatementFilingContent = () => {
                         and maintain good standing with tax authorities.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide expert assistance in
                         withholding statement filing, ensuring you meet your tax
                         obligations efficiently.
@@ -129,7 +129,7 @@ const WithholdingStatementFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     A Withholding Statement is a document that reports the amount
                     of tax deducted at source and submitted to the FBR. It
                     provides details about the payments made, the withholding
@@ -158,7 +158,7 @@ const WithholdingStatementFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     In Pakistan, the following entities are required to file
                     withholding statements:
                 </p>
@@ -167,7 +167,7 @@ const WithholdingStatementFilingContent = () => {
                     {requiredEntities.map((item) => (
                         <li
                             key={item}
-                            className="flex items-start gap-3 rounded-2xl border border-[#061D3A]/10 bg-[#F8F7F4] p-4 text-base leading-7 text-[#455468]"
+                            className="flex items-start gap-3 rounded-2xl border border-[#061D3A]/10 bg-[#F8F7F4] p-4 text-base leading-7 text-[#243044]"
                         >
                             <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#D7A332]" />
                             <span>{item}</span>
@@ -201,7 +201,7 @@ const WithholdingStatementFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer comprehensive services for
                     Withholding Statement Filing, including:
                 </p>

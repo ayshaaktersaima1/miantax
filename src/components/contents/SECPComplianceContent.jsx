@@ -83,7 +83,7 @@ const SECPComplianceContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         The Securities and Exchange Commission of Pakistan
                         (SECP) is the regulatory authority overseeing corporate
                         sector compliance in Pakistan. All registered companies,
@@ -95,7 +95,7 @@ const SECPComplianceContent = () => {
                         penalties.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide expert guidance on
                         SECP compliance, helping businesses navigate regulatory
                         requirements efficiently.
@@ -128,7 +128,7 @@ const SECPComplianceContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer comprehensive compliance
                     services to assist businesses in meeting their SECP
                     obligations, including:

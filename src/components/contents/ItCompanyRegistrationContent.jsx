@@ -135,7 +135,7 @@ const ITCompanyRegistrationContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         IT Company Registration is the formal process through
                         which businesses engaged in information technology (IT)
                         and software development register with the relevant
@@ -146,7 +146,7 @@ const ITCompanyRegistrationContent = () => {
                         growth of the IT sector.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         In Pakistan, IT companies typically register with the
                         Securities and Exchange Commission of Pakistan (SECP)
                         and obtain a National Tax Number (NTN) from the Federal
@@ -237,7 +237,7 @@ const ITCompanyRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in assisting
                     entrepreneurs with IT company registration, offering:
                 </p>

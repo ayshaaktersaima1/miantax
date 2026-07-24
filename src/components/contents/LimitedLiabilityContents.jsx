@@ -144,7 +144,7 @@ const LimitedLiabilityContents = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         A Limited Liability Partnership (LLP) is a modern
                         business structure that combines the operational
                         flexibility of a partnership with the benefits of
@@ -155,7 +155,7 @@ const LimitedLiabilityContents = () => {
                         personal assets.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         In an LLP, partners have limited liability, meaning they
                         are only responsible for the business’s debts to the
                         extent of their contributions. This feature protects
@@ -245,7 +245,7 @@ const LimitedLiabilityContents = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in assisting
                     businesses with LLP registration and compliance, offering:
                 </p>

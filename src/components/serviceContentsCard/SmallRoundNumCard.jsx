@@ -17,7 +17,7 @@ const SmallRoundNumCard = ({ items }) => {
                             {item.title}
                         </h3>
 
-                        <p className="mt-2 text-sm leading-7 text-[#455468] md:text-base">
+                        <p className="mt-2 text-base leading-7 text-[#243044] md:text-base">
                             {item.description}
                         </p>
                     </div>

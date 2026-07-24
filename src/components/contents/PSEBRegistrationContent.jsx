@@ -57,7 +57,7 @@ const PSEBRegistrationContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         PSEB Registration is the official process through which
                         IT companies register with the Pakistan Software Export
                         Board (PSEB). This government initiative is designed to
@@ -69,7 +69,7 @@ const PSEBRegistrationContent = () => {
                         global competitiveness.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         The PSEB functions as a regulatory body that oversees
                         the IT sector and provides strategic support to
                         businesses in various ways. Registered companies can
@@ -82,7 +82,7 @@ const PSEBRegistrationContent = () => {
                         delivery.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         With PSEB registration, businesses gain credibility in
                         the marketplace, enabling them to attract local and
                         international clients more effectively. Furthermore,
@@ -92,7 +92,7 @@ const PSEBRegistrationContent = () => {
                         within the industry.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         By registering with the PSEB, IT companies position
                         themselves for success in a competitive landscape. They
                         leverage the board’s extensive network and resources to
@@ -108,7 +108,7 @@ const PSEBRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Registering with PSEB is essential for IT companies for
                     several key reasons:
                 </p>

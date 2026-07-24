@@ -97,7 +97,7 @@ const SoleProprietorshipContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         A Sole Proprietorship is the simplest form of business
                         structure in Pakistan. It allows an individual to operate
                         a business under their own name without forming a
@@ -107,7 +107,7 @@ const SoleProprietorshipContent = () => {
                         small business owners.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide guidance and
                         assistance to help you establish a Sole Proprietorship,
                         ensure compliance with local regulations, and facilitate
@@ -159,7 +159,7 @@ const SoleProprietorshipContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer a range of services to
                     assist with Sole Proprietorship registration and ongoing
                     support, including:

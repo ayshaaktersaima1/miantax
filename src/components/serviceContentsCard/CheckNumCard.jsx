@@ -10,8 +10,8 @@ const CheckNumCard = ({ benefit, index }) => {
 
                 <div>
                     <div className="flex items-center gap-3">
-                        <span className="text-xs font-semibold tracking-widest text-[#D7A332]">
-                            {String(index + 1).padStart(2, "0")}
+                        <span className="text-xs font-semibold text-[#D7A332]">
+                            {index + 1}
                         </span>
 
                         <h3 className="text-xl font-semibold text-[#061D3A]">
@@ -19,7 +19,7 @@ const CheckNumCard = ({ benefit, index }) => {
                         </h3>
                     </div>
 
-                    <p className="mt-3 text-sm leading-7 text-[#455468] md:text-base">
+                    <p className="mt-3 text-base leading-7 text-[#243044]">
                         {benefit.description}
                     </p>
                 </div>

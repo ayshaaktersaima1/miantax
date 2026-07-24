@@ -135,7 +135,7 @@ const CallCenterRegistrationContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         Call Center Registration is the official process through
                         which businesses operating call centers in Pakistan
                         register with the relevant regulatory authorities. This
@@ -145,7 +145,7 @@ const CallCenterRegistrationContent = () => {
                         credibility and efficiency.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         The Pakistan Telecommunication Authority (PTA) oversees
                         the registration of call centers in Pakistan, ensuring
                         that all operations adhere to legal standards and
@@ -236,7 +236,7 @@ const CallCenterRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in assisting
                     entrepreneurs with call center registration, offering:
                 </p>

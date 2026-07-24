@@ -139,7 +139,7 @@ const PartnershipAOPContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         A Partnership, also known as an Association of Persons
                         (AOP), is a prominent business structure in Pakistan
                         that facilitates collaborative entrepreneurship. This
@@ -150,7 +150,7 @@ const PartnershipAOPContent = () => {
                         partnerships in the country.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         In a Partnership, each partner contributes their unique
                         skills, resources, and expertise, fostering a
                         collaborative environment that enhances the overall
@@ -160,7 +160,7 @@ const PartnershipAOPContent = () => {
                         partners to capitalize on each other’s strengths.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         By forming a Partnership, individuals can benefit from a
                         flexible management structure. Decisions can be made
                         collectively, reflecting the interests and insights of
@@ -169,7 +169,7 @@ const PartnershipAOPContent = () => {
                         making it an attractive choice for various industries.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         Overall, the Partnership structure is an excellent
                         option for those looking to start a business with a
                         shared vision. It allows partners to work together
@@ -186,7 +186,7 @@ const PartnershipAOPContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Registering your Partnership as an AOP is crucial for
                     several reasons:
                 </p>
@@ -255,7 +255,7 @@ const PartnershipAOPContent = () => {
                                         {requirement.title}
                                     </h3>
 
-                                    <p className="mt-3 text-sm leading-7 text-[#455468] md:text-base">
+                                    <p className="mt-3 text-sm leading-7 text-[#243044] md:text-base">
                                         {requirement.description}
                                     </p>
                                 </div>
@@ -272,7 +272,7 @@ const PartnershipAOPContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer a comprehensive suite of
                     services to assist you with Partnership registration and
                     ongoing compliance, including:

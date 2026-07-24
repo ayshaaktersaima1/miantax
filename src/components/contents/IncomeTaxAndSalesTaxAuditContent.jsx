@@ -146,7 +146,7 @@ const TaxAuditsContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Audits are formal examinations
                     conducted by the Federal Board of Revenue (FBR) or provincial
                     tax authorities to assess taxpayers’ compliance with tax
@@ -244,7 +244,7 @@ const TaxAuditsContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Audits, offering:

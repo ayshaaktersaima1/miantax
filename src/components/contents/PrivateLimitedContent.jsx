@@ -39,7 +39,7 @@ const PrivateLimitedContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         A Private Limited Company (Pvt. Ltd.) is the most popular
                         choice for small and medium-sized businesses in Pakistan,
                         thanks to its flexibility, limited liability protection,
@@ -51,7 +51,7 @@ const PrivateLimitedContent = () => {
                         structure.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide end-to-end assistance
                         in registering a Private Limited Company, guiding you
                         through every step—from choosing the right company name

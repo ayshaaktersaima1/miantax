@@ -146,7 +146,7 @@ const TaxRefundsContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Refunds refer to the amounts
                     reimbursed to taxpayers when they have overpaid their taxes
                     or are eligible for refunds due to various reasons, such as
@@ -245,7 +245,7 @@ const TaxRefundsContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Refunds, offering:

@@ -18,7 +18,7 @@ const HelpCard = ({ services }) => {
                         </h3>
                     </div>
 
-                    <p className="mt-4 text-sm leading-7 text-[#455468]">
+                    <p className="mt-4 text-base leading-7 text-[#243044]">
                         {service.description}
                     </p>
                 </article>

@@ -143,7 +143,7 @@ const SalesTaxRegistrationContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         Sales Tax Registration is a mandatory process for
                         businesses engaged in taxable activities in Pakistan. It
                         involves obtaining a Sales Tax Registration Number
@@ -154,7 +154,7 @@ const SalesTaxRegistrationContent = () => {
                         collection and remittance of sales tax.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we provide expert services to
                         assist you in obtaining your Sales Tax Registration and
                         filing your sales tax returns accurately and on time.
@@ -199,7 +199,7 @@ const SalesTaxRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Once registered for sales tax, businesses must file periodic
                     sales tax returns, reporting sales, purchases, and sales tax
                     collected.
@@ -244,7 +244,7 @@ const SalesTaxRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive services for Sales Tax Registration and Return
                     Filing, offering:

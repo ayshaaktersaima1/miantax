@@ -142,7 +142,7 @@ const IncomeTaxContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Appeals refer to the formal process
                     through which taxpayers contest decisions made by tax
                     authorities regarding their income tax or sales tax
@@ -234,7 +234,7 @@ const IncomeTaxContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Appeals, offering:

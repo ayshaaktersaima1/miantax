@@ -128,7 +128,7 @@ const AboutCompany = () => {
                         Dedicated Tax Experts Committed to Your Success
                     </h2>
 
-                    <p className="mt-6 max-w-2xl text-base leading-8 text-[#455468]">
+                    <p className="mt-6 max-w-2xl text-base leading-8 text-[#243044]">
                         We are a top tax consultancy firm in Pakistan, focusing on
                         providing tax solutions and company registration services for
                         both individuals and businesses. Our skilled professionals work

@@ -127,7 +127,7 @@ const CopyrightRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Copyright Registration is a vital legal process that
                     protects your original creations, such as literary works,
                     music, art, software, and more. In Pakistan, copyright
@@ -218,7 +218,7 @@ const CopyrightRegistrationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in guiding creators
                     and businesses through the copyright registration process,
                     offering:

@@ -121,17 +121,10 @@ const serviceItems = [
 const Navbar = () => {
     const pathname = usePathname();
 
-    const [activeDesktopSubmenu, setActiveDesktopSubmenu] =
-        useState(null);
-
-    const [isMobileMenuOpen, setIsMobileMenuOpen] =
-        useState(false);
-
-    const [isMobileServicesOpen, setIsMobileServicesOpen] =
-        useState(false);
-
-    const [openMobileSubmenu, setOpenMobileSubmenu] =
-        useState(null);
+    const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+    const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
@@ -165,14 +158,14 @@ const Navbar = () => {
 
     const navLinkClass = (href) => {
         return `text-base font-medium transition hover:text-[#D7A332] ${pathname === href
-            ? "text-[#D7A332]"
-            : "text-[#061D3A]"
+                ? "text-[#D7A332]"
+                : "text-[#061D3A]"
             }`;
     };
 
     return (
         <nav className="sticky top-0 z-50 mx-auto -mt-12 w-full rounded-3xl bg-white shadow-lg lg:w-[96%]">
-            <div className="w-[88vw] mx-auto">
+            <div className="mx-auto w-[88vw]">
                 <div className="flex h-20 items-center justify-between lg:h-24">
                     <Link href="/" onClick={closeMobileMenu}>
                         <Image
@@ -204,8 +197,8 @@ const Navbar = () => {
                             <Link
                                 href="/services"
                                 className={`flex items-center gap-1 text-base font-medium transition hover:text-[#D7A332] ${pathname === "/services"
-                                    ? "text-[#D7A332]"
-                                    : "text-[#061D3A]"
+                                        ? "text-[#D7A332]"
+                                        : "text-[#061D3A]"
                                     }`}
                             >
                                 Services
@@ -213,69 +206,56 @@ const Navbar = () => {
                                 <IoIosArrowDown className="transition-transform group-hover/services:rotate-180" />
                             </Link>
 
-                            <div
-                                onMouseLeave={() =>
-                                    setActiveDesktopSubmenu(null)
-                                }
-                                className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition group-hover/services:visible group-hover/services:opacity-100"
-                            >
-                                <div className="relative">
+                            <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition group-hover/services:visible group-hover/services:opacity-100">
+                                <div
+                                    className="relative"
+                                    onMouseLeave={() =>
+                                        setActiveDesktopSubmenu(null)
+                                    }
+                                >
                                     <div className="w-80 rounded-xl bg-[#061D3A] p-2 shadow-lg">
-                                        <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
-                                            {serviceItems.map(
-                                                (service) =>
-                                                    service.submenu ? (
-                                                        <Link
-                                                            key={
-                                                                service.href
-                                                            }
-                                                            href={
-                                                                service.href
-                                                            }
-                                                            onMouseEnter={() =>
-                                                                setActiveDesktopSubmenu(
-                                                                    service
-                                                                )
-                                                            }
-                                                            className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition ${isServiceActive(
+                                        <div className="max-h-[70vh] overflow-y-auto">
+                                            {serviceItems.map((service) =>
+                                                service.submenu ? (
+                                                    <Link
+                                                        key={service.href}
+                                                        href={service.href}
+                                                        onMouseEnter={() =>
+                                                            setActiveDesktopSubmenu(
                                                                 service
                                                             )
+                                                        }
+                                                        className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition ${isServiceActive(
+                                                            service
+                                                        )
                                                                 ? "bg-white text-[#061D3A]"
                                                                 : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                                }`}
-                                                        >
-                                                            <span>
-                                                                {
-                                                                    service.label
-                                                                }
-                                                            </span>
+                                                            }`}
+                                                    >
+                                                        <span>
+                                                            {service.label}
+                                                        </span>
 
-                                                            <IoIosArrowForward className="shrink-0" />
-                                                        </Link>
-                                                    ) : (
-                                                        <Link
-                                                            key={
-                                                                service.href
-                                                            }
-                                                            href={
-                                                                service.href
-                                                            }
-                                                            onMouseEnter={() =>
-                                                                setActiveDesktopSubmenu(
-                                                                    null
-                                                                )
-                                                            }
-                                                            className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
+                                                        <IoIosArrowForward />
+                                                    </Link>
+                                                ) : (
+                                                    <Link
+                                                        key={service.href}
+                                                        href={service.href}
+                                                        onMouseEnter={() =>
+                                                            setActiveDesktopSubmenu(
+                                                                null
+                                                            )
+                                                        }
+                                                        className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
                                                                 service.href
                                                                 ? "bg-white text-[#061D3A]"
                                                                 : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                                }`}
-                                                        >
-                                                            {
-                                                                service.label
-                                                            }
-                                                        </Link>
-                                                    )
+                                                            }`}
+                                                    >
+                                                        {service.label}
+                                                    </Link>
+                                                )
                                             )}
                                         </div>
                                     </div>
@@ -283,54 +263,29 @@ const Navbar = () => {
                                     {activeDesktopSubmenu && (
                                         <div
                                             className={`absolute left-full z-50 w-80 pl-2 ${activeDesktopSubmenu.label ===
-                                                "Litigation" ||
-                                                activeDesktopSubmenu.label ===
-                                                "Tax Services"
-                                                ? "bottom-0"
-                                                : "top-0"
+                                                    "Litigation" ||
+                                                    activeDesktopSubmenu.label ===
+                                                    "Tax Services"
+                                                    ? "bottom-0"
+                                                    : "top-0"
                                                 }`}
                                         >
                                             <div className="w-80 rounded-xl bg-[#061D3A] p-2 shadow-lg">
-                                                <div className="max-h-[70vh] overflow-y-auto overscroll-contain">
-                                                    <Link
-                                                        href={
-                                                            activeDesktopSubmenu.href
-                                                        }
-                                                        className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
-                                                            activeDesktopSubmenu.href
-                                                            ? "bg-white text-[#061D3A]"
-                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                            }`}
-                                                    >
-                                                        {
-                                                            activeDesktopSubmenu.label
-                                                        }
-                                                    </Link>
-
-                                                    {activeDesktopSubmenu.submenu.map(
-                                                        (
-                                                            subItem
-                                                        ) => (
-                                                            <Link
-                                                                key={
-                                                                    subItem.href
-                                                                }
-                                                                href={
-                                                                    subItem.href
-                                                                }
-                                                                className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
+                                                {activeDesktopSubmenu.submenu.map(
+                                                    (subItem) => (
+                                                        <Link
+                                                            key={subItem.href}
+                                                            href={subItem.href}
+                                                            className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
                                                                     subItem.href
                                                                     ? "bg-white text-[#061D3A]"
                                                                     : "text-white hover:bg-white hover:text-[#061D3A]"
-                                                                    }`}
-                                                            >
-                                                                {
-                                                                    subItem.label
-                                                                }
-                                                            </Link>
-                                                        )
-                                                    )}
-                                                </div>
+                                                                }`}
+                                                        >
+                                                            {subItem.label}
+                                                        </Link>
+                                                    )
+                                                )}
                                             </div>
                                         </div>
                                     )}
@@ -386,7 +341,7 @@ const Navbar = () => {
                 </div>
 
                 {isMobileMenuOpen && (
-                    <div className="max-h-[80vh] overflow-y-auto overscroll-contain border-t border-gray-200 pb-5 lg:hidden">
+                    <div className="max-h-[80vh] overflow-y-auto border-t border-gray-200 pb-5 lg:hidden">
                         <Link
                             href="/"
                             onClick={closeMobileMenu}
@@ -417,8 +372,8 @@ const Navbar = () => {
 
                                 <IoIosArrowDown
                                     className={`transition-transform ${isMobileServicesOpen
-                                        ? "rotate-180"
-                                        : ""
+                                            ? "rotate-180"
+                                            : ""
                                         }`}
                                 />
                             </button>
@@ -441,11 +396,11 @@ const Navbar = () => {
                                                         )
                                                     }
                                                     className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium ${submenuOpen ||
-                                                        isServiceActive(
-                                                            service
-                                                        )
-                                                        ? "bg-white text-[#061D3A]"
-                                                        : "text-white"
+                                                            isServiceActive(
+                                                                service
+                                                            )
+                                                            ? "bg-white text-[#061D3A]"
+                                                            : "text-white"
                                                         }`}
                                                 >
                                                     <span>
@@ -454,9 +409,9 @@ const Navbar = () => {
 
                                                     {service.submenu && (
                                                         <IoIosArrowForward
-                                                            className={`shrink-0 transition-transform ${submenuOpen
-                                                                ? "rotate-90"
-                                                                : ""
+                                                            className={`transition-transform ${submenuOpen
+                                                                    ? "rotate-90"
+                                                                    : ""
                                                                 }`}
                                                         />
                                                     )}
@@ -466,9 +421,7 @@ const Navbar = () => {
                                                     submenuOpen && (
                                                         <div className="ml-4 border-l border-white/30 pl-2">
                                                             {service.submenu.map(
-                                                                (
-                                                                    subItem
-                                                                ) => (
+                                                                (subItem) => (
                                                                     <Link
                                                                         key={
                                                                             subItem.href
@@ -480,9 +433,9 @@ const Navbar = () => {
                                                                             closeMobileMenu
                                                                         }
                                                                         className={`block rounded-lg px-4 py-3 text-sm font-medium ${pathname ===
-                                                                            subItem.href
-                                                                            ? "bg-white text-[#061D3A]"
-                                                                            : "text-white"
+                                                                                subItem.href
+                                                                                ? "bg-white text-[#061D3A]"
+                                                                                : "text-white"
                                                                             }`}
                                                                     >
                                                                         {

@@ -44,7 +44,7 @@ const SingleMemberCompanyContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         A Single Member Company (SMC) is a unique form of
                         business entity in Pakistan designed for entrepreneurs
                         who wish to operate their business as a separate legal
@@ -54,7 +54,7 @@ const SingleMemberCompanyContent = () => {
                         control over the company’s operations.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we specialize in assisting
                         entrepreneurs with the registration and establishment of
                         Single Member Companies (SMC), ensuring compliance with

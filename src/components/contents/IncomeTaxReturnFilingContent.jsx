@@ -119,7 +119,7 @@ const IncomeTaxReturnFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Filing an Income Tax Return is a legal obligation for
                     individuals and businesses earning taxable income in
                     Pakistan. It involves reporting your income, deductions, and
@@ -150,7 +150,7 @@ const IncomeTaxReturnFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     In Pakistan, the following individuals and entities are
                     required to file an income tax return:
                 </p>
@@ -159,7 +159,7 @@ const IncomeTaxReturnFilingContent = () => {
                     {requiredFilers.map((item) => (
                         <li
                             key={item}
-                            className="flex items-start gap-3 rounded-2xl border border-[#061D3A]/10 bg-[#F8F7F4] p-4 text-base leading-7 text-[#455468]"
+                            className="flex items-start gap-3 rounded-2xl border border-[#061D3A]/10 bg-[#F8F7F4] p-4 text-base leading-7 text-[#243044]"
                         >
                             <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#D7A332]" />
                             <span>{item}</span>
@@ -193,7 +193,7 @@ const IncomeTaxReturnFilingContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we offer comprehensive services for
                     Income Tax Return Filing, including:
                 </p>

@@ -124,7 +124,7 @@ const FilerContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-6 space-y-5">
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         In Pakistan, the term filer refers to individuals or
                         entities registered with the Federal Board of Revenue
                         (FBR) and filed their income tax returns. Being a
@@ -133,7 +133,7 @@ const FilerContent = () => {
                         and access to certain privileges under the tax system.
                     </p>
 
-                    <p className="text-base leading-8 text-[#455468]">
+                    <p className="text-base leading-8 text-[#243044]">
                         At MIAN TAX ASSOCIATES, we help you understand the
                         importance of filer status and guide you through the
                         process of becoming a filer.
@@ -160,7 +160,7 @@ const FilerContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Anyone with taxable income can become a filer in Pakistan,
                     including:
                 </p>
@@ -195,7 +195,7 @@ const FilerContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we provide comprehensive services to
                     help you become a registered filer, including:
                 </p>

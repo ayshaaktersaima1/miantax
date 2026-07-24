@@ -151,7 +151,7 @@ const IncomeTaxAndSalesTaxContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Notices are formal communications
                     issued by the Federal Board of Revenue (FBR) or provincial
                     tax authorities in Pakistan. These notices inform taxpayers
@@ -247,7 +247,7 @@ const IncomeTaxAndSalesTaxContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Notices, offering:

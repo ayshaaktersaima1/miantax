@@ -672,7 +672,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     Tax Litigation is the legal process through which taxpayers
                     challenge decisions made by tax authorities regarding tax
                     assessments, liabilities, and penalties. In Pakistan, tax
@@ -763,7 +763,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we provide comprehensive tax
                     litigation services, offering:
                 </p>
@@ -785,7 +785,7 @@ const TaxLitigationContent = () => {
                     What are Income Tax and Sales Tax Appeals?
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Appeals refer to the formal process
                     through which taxpayers contest decisions made by tax
                     authorities regarding their income tax or sales tax
@@ -877,7 +877,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Appeals, offering:
@@ -899,7 +899,7 @@ const TaxLitigationContent = () => {
                     What are Income Tax and Sales Tax Notices?
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Notices are formal communications
                     issued by the Federal Board of Revenue (FBR) or provincial
                     tax authorities in Pakistan. These notices inform taxpayers
@@ -995,7 +995,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Notices, offering:
@@ -1017,7 +1017,7 @@ const TaxLitigationContent = () => {
                     What is an Income Tax and Sales Tax Audit?
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Audits are formal examinations
                     conducted by the Federal Board of Revenue (FBR) or provincial
                     tax authorities to assess taxpayers’ compliance with tax
@@ -1115,7 +1115,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Audits, offering:
@@ -1137,7 +1137,7 @@ const TaxLitigationContent = () => {
                     What are Income Tax and Sales Tax Refunds?
                 </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#455468]">
+                <p className="mt-4 text-base leading-8 text-[#243044]">
                     Income Tax and Sales Tax Refunds refer to the amounts
                     reimbursed to taxpayers when they have overpaid their taxes
                     or are eligible for refunds due to various reasons, such as
@@ -1236,7 +1236,7 @@ const TaxLitigationContent = () => {
 
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
-                <p className="mt-6 text-base leading-8 text-[#455468]">
+                <p className="mt-6 text-base leading-8 text-[#243044]">
                     At MIAN TAX ASSOCIATES, we specialize in providing
                     comprehensive assistance with Income Tax and Sales Tax
                     Refunds, offering:
