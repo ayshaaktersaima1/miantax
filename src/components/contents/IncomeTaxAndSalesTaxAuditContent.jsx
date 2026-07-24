@@ -167,17 +167,30 @@ const TaxAuditsContent = () => {
                 <div className="mt-4 h-0.5 w-14 bg-[#D7A332]" />
 
                 <div className="mt-8">
-                    <h3 className="mb-5 text-2xl font-semibold text-[#061D3A]">
-                        Income Tax Audits
-                    </h3>
+
+                    <div className="mb-5 flex items-center gap-3">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#061D3A] text-sm font-semibold text-[#D7A332]">
+                            1
+                        </span>
+
+                        <h3 className="text-2xl font-semibold text-[#061D3A]">
+                            Income Tax Audits
+                        </h3>
+                    </div>
 
                     <CheckMarkCard items={incomeTaxAudits} />
                 </div>
 
                 <div className="mt-10">
-                    <h3 className="mb-5 text-2xl font-semibold text-[#061D3A]">
-                        Sales Tax Audits
-                    </h3>
+                    <div className="mb-5 flex items-center gap-3">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#061D3A] text-sm font-semibold text-[#D7A332]">
+                            2
+                        </span>
+
+                        <h3 className="text-2xl font-semibold text-[#061D3A]">
+                            Sales Tax Audits
+                        </h3>
+                    </div>
 
                     <CheckMarkCard items={salesTaxAudits} />
                 </div>

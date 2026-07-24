@@ -1,4 +1,4 @@
-import { Inter, Lora, Manrope, Playfair_Display } from "next/font/google";
+import { Inter, Lora, Manrope, Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import GlobalScrollReveal from "@/components/GlobalScrollReveal";
@@ -10,9 +10,9 @@ const lora = Lora({
   weight: ["400", "500", "600", "700"],
 });
 
-const manrope = Manrope({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-roboto",
 });
 
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${lora.variable} ${manrope.variable}`}
+      className={`${lora.variable} ${roboto.variable}`}
     >
       <body className="min-h-full flex flex-col">
 
