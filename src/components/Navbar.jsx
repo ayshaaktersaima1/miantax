@@ -157,9 +157,9 @@ const Navbar = () => {
     };
 
     const navLinkClass = (href) => {
-        return `text-base font-medium transition hover:text-[#D7A332] ${pathname === href
-                ? "text-[#D7A332]"
-                : "text-[#061D3A]"
+        return `text-base font-semibold transition hover:text-[#D7A332] ${pathname === href
+            ? "text-[#D7A332]"
+            : "text-[#061D3A]"
             }`;
     };
 
@@ -196,9 +196,9 @@ const Navbar = () => {
                         <div className="group/services relative">
                             <Link
                                 href="/services"
-                                className={`flex items-center gap-1 text-base font-medium transition hover:text-[#D7A332] ${pathname === "/services"
-                                        ? "text-[#D7A332]"
-                                        : "text-[#061D3A]"
+                                className={`flex items-center gap-1 text-base font-semibold transition hover:text-[#D7A332] ${pathname === "/services"
+                                    ? "text-[#D7A332]"
+                                    : "text-[#061D3A]"
                                     }`}
                             >
                                 Services
@@ -228,8 +228,8 @@ const Navbar = () => {
                                                         className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition ${isServiceActive(
                                                             service
                                                         )
-                                                                ? "bg-white text-[#061D3A]"
-                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                            ? "bg-white text-[#061D3A]"
+                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
                                                             }`}
                                                     >
                                                         <span>
@@ -248,9 +248,9 @@ const Navbar = () => {
                                                             )
                                                         }
                                                         className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
-                                                                service.href
-                                                                ? "bg-white text-[#061D3A]"
-                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                            service.href
+                                                            ? "bg-white text-[#061D3A]"
+                                                            : "text-white hover:bg-white hover:text-[#061D3A]"
                                                             }`}
                                                     >
                                                         {service.label}
@@ -263,11 +263,11 @@ const Navbar = () => {
                                     {activeDesktopSubmenu && (
                                         <div
                                             className={`absolute left-full z-50 w-80 pl-2 ${activeDesktopSubmenu.label ===
-                                                    "Litigation" ||
-                                                    activeDesktopSubmenu.label ===
-                                                    "Tax Services"
-                                                    ? "bottom-0"
-                                                    : "top-0"
+                                                "Litigation" ||
+                                                activeDesktopSubmenu.label ===
+                                                "Tax Services"
+                                                ? "bottom-0"
+                                                : "top-0"
                                                 }`}
                                         >
                                             <div className="w-80 rounded-xl bg-[#061D3A] p-2 shadow-lg">
@@ -277,9 +277,9 @@ const Navbar = () => {
                                                             key={subItem.href}
                                                             href={subItem.href}
                                                             className={`block rounded-lg px-4 py-3 text-sm font-medium transition ${pathname ===
-                                                                    subItem.href
-                                                                    ? "bg-white text-[#061D3A]"
-                                                                    : "text-white hover:bg-white hover:text-[#061D3A]"
+                                                                subItem.href
+                                                                ? "bg-white text-[#061D3A]"
+                                                                : "text-white hover:bg-white hover:text-[#061D3A]"
                                                                 }`}
                                                         >
                                                             {subItem.label}
@@ -372,8 +372,8 @@ const Navbar = () => {
 
                                 <IoIosArrowDown
                                     className={`transition-transform ${isMobileServicesOpen
-                                            ? "rotate-180"
-                                            : ""
+                                        ? "rotate-180"
+                                        : ""
                                         }`}
                                 />
                             </button>
@@ -396,11 +396,11 @@ const Navbar = () => {
                                                         )
                                                     }
                                                     className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium ${submenuOpen ||
-                                                            isServiceActive(
-                                                                service
-                                                            )
-                                                            ? "bg-white text-[#061D3A]"
-                                                            : "text-white"
+                                                        isServiceActive(
+                                                            service
+                                                        )
+                                                        ? "bg-white text-[#061D3A]"
+                                                        : "text-white"
                                                         }`}
                                                 >
                                                     <span>
@@ -410,8 +410,8 @@ const Navbar = () => {
                                                     {service.submenu && (
                                                         <IoIosArrowForward
                                                             className={`transition-transform ${submenuOpen
-                                                                    ? "rotate-90"
-                                                                    : ""
+                                                                ? "rotate-90"
+                                                                : ""
                                                                 }`}
                                                         />
                                                     )}
@@ -433,9 +433,9 @@ const Navbar = () => {
                                                                             closeMobileMenu
                                                                         }
                                                                         className={`block rounded-lg px-4 py-3 text-sm font-medium ${pathname ===
-                                                                                subItem.href
-                                                                                ? "bg-white text-[#061D3A]"
-                                                                                : "text-white"
+                                                                            subItem.href
+                                                                            ? "bg-white text-[#061D3A]"
+                                                                            : "text-white"
                                                                             }`}
                                                                     >
                                                                         {
@@ -464,7 +464,7 @@ const Navbar = () => {
                         <Link
                             href="/contact-us"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-semimedium text-[#061D3A]"
                         >
                             Contact Us
                         </Link>

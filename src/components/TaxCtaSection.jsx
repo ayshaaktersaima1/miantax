@@ -8,14 +8,14 @@ import {
 const TaxCtaSection = () => {
     return (
         <section className="relative bg-[url('/images/tax-cta.webp')] bg-cover bg-center bg-fixed">
-            <div className="absolute inset-0 bg-black/75" />
+            <div className="absolute inset-0 bg-black/70" />
 
             <div className="relative z-10 mx-auto flex min-h-96 w-[88%] items-center justify-center py-16">
                 <div className="text-center text-white">
                     <div className="flex items-center justify-center gap-3">
                         <span className="h-0.5 w-10 bg-[#D7A332]" />
 
-                        <FiAward className="text-xl text-[#D7A332]" />
+                        <FiAward className="hidden md:inline text-xl text-[#D7A332]" />
 
                         <p className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
                             Tax Consulting Experts

@@ -47,7 +47,7 @@ const NumbersSection = () => {
                             Numbers
                         </h2>
 
-                        <p className="mt-3 max-w-xs text-base leading-7 text-white/80">
+                        <p className="mt-3 max-w-xs text-base leading-7 text-white/90">
                             Delivering measurable results with commitment,
                             expertise, and trust built over the years.
                         </p>

@@ -30,7 +30,7 @@ const services = [
         title: "Partnership Registration (AOP)",
         description:
             "A Partnership, also known as an Association of Persons (AOP), is a prominent business structure",
-        href: "/services/partnership-registration",
+        href: "/services/partnership-registration-aop",
         icon: FiUsers,
     },
     {
@@ -38,7 +38,7 @@ const services = [
         title: "Limited Liability Partnership(LLP)",
         description:
             "A Limited Liability Partnership (LLP) is a modern business structure",
-        href: "/services/limited-liability-partnership",
+        href: "/services/limited-liability-partnershipllp",
         icon: FiShield,
     },
     {

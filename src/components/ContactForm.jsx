@@ -36,7 +36,7 @@ const ContactForm = () => {
 
             <div className="mt-3 h-0.5 w-12 bg-[#D7A332]" />
 
-            <p className="mt-4 text-sm leading-6 text-white/65">
+            <p className="mt-4 text-sm leading-6 text-white/80">
                 Have a question or need assistance? Fill out the form and
                 we&apos;ll get back to you shortly.
             </p>
