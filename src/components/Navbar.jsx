@@ -370,6 +370,13 @@ const Navbar = () => {
                         >
                             About Us
                         </Link>
+                        <Link
+                            href="/our-team"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
+                        >
+                            Our Team
+                        </Link>
 
                         <div className="border-b border-gray-100">
                             <button
@@ -467,6 +474,13 @@ const Navbar = () => {
                         </div>
 
                         <Link
+                            href="/international-services"
+                            onClick={closeMobileMenu}
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
+                        >
+                            International Services
+                        </Link>
+                        <Link
                             href="/blog"
                             onClick={closeMobileMenu}
                             className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
@@ -477,7 +491,7 @@ const Navbar = () => {
                         <Link
                             href="/contact-us"
                             onClick={closeMobileMenu}
-                            className="block border-b border-gray-100 py-4 text-base font-semimedium text-[#061D3A]"
+                            className="block border-b border-gray-100 py-4 text-base font-medium text-[#061D3A]"
                         >
                             Contact Us
                         </Link>
