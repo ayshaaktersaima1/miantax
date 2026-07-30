@@ -9,6 +9,8 @@ import {
 } from "react-icons/fi";
 
 import {
+    FaFacebookF,
+    FaLinkedinIn,
     FaTiktok,
     FaYoutube,
 } from "react-icons/fa";
@@ -146,6 +148,26 @@ const Footer = () => {
                     </p>
 
                     <div className="mt-7 flex items-center gap-3">
+                        <Link
+                            href="https://www.facebook.com/people/MIAN-TAX-Associates/61575680948948/?rdid=falv9HGk5Mnudp7z&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HXkAySdrC%2F"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D7A332] text-[#D7A332] transition duration-300 hover:bg-[#D7A332] hover:text-[#061D3A]"
+                        >
+                            <FaFacebookF />
+                        </Link>
+
+                        <Link
+                            href="https://www.linkedin.com/company/mian-tax-associates/posts/?feedView=all"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D7A332] text-[#D7A332] transition duration-300 hover:bg-[#D7A332] hover:text-[#061D3A]"
+                        >
+                            <FaLinkedinIn />
+                        </Link>
+
                         <Link
                             href="https://www.tiktok.com/@miantaxassociates?_t=8sQkR4bOLOU&_r=1"
                             target="_blank"

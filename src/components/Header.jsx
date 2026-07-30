@@ -2,7 +2,12 @@ import Link from "next/link";
 
 import { FiMail, FiMapPin } from "react-icons/fi";
 
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import {
+    FaFacebookF,
+    FaLinkedinIn,
+    FaTiktok,
+    FaYoutube,
+} from "react-icons/fa";
 
 const Header = () => {
     return (
@@ -23,9 +28,7 @@ const Header = () => {
                     >
                         <FiMail className="text-lg text-[#D7A332]" />
 
-                        <span className="lg:hidden">
-                            Email Us
-                        </span>
+                        <span className="lg:hidden">Email Us</span>
 
                         <span className="hidden lg:inline">
                             Miantaxassociatespvt.ltd@gmail.com
@@ -34,6 +37,26 @@ const Header = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
+                    <Link
+                        href="https://www.facebook.com/people/MIAN-TAX-Associates/61575680948948/?rdid=falv9HGk5Mnudp7z&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HXkAySdrC%2F"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Mian Tax Associates on Facebook"
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D7A332] text-sm hover:bg-[#D7A332] hover:text-[#061D3A]"
+                    >
+                        <FaFacebookF />
+                    </Link>
+
+                    <Link
+                        href="https://www.linkedin.com/company/mian-tax-associates/posts/?feedView=all"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Mian Tax Associates on LinkedIn"
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D7A332] text-sm hover:bg-[#D7A332] hover:text-[#061D3A]"
+                    >
+                        <FaLinkedinIn />
+                    </Link>
+
                     <Link
                         href="https://www.tiktok.com/@miantaxassociates?_t=8sQkR4bOLOU&_r=1"
                         target="_blank"
