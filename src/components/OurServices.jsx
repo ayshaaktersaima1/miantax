@@ -142,48 +142,46 @@ const OurServices = () => {
                     </p>
                 </div>
 
-                <div className="mt-12 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
+                <div className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:gap-7">
                     {services.map((service) => {
                         const Icon = service.icon;
 
                         return (
-                            <article
+                            <Link
                                 key={service.id}
-                                className="group flex min-h-96 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-[#061D3A] hover:shadow-xl"
+                                href={service.href}
+                                className="group flex min-h-96 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-[#061D3A] hover:shadow-xl lg:min-h-80 xl:min-h-96"
                             >
-                                <div className="flex flex-1 flex-col p-7">
-                                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-[#D7A332]">
-                                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#D7A332]/10 text-3xl text-[#D7A332] transition duration-300 group-hover:bg-[#D7A332] group-hover:text-[#061D3A]">
+                                <div className="flex flex-1 flex-col p-7 lg:p-5 xl:p-7">
+                                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-[#D7A332] lg:h-14 lg:w-14 xl:h-20 xl:w-20">
+                                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#D7A332]/10 text-3xl text-[#D7A332] transition duration-300 group-hover:bg-[#D7A332] group-hover:text-[#061D3A] lg:h-11 lg:w-11 lg:text-xl xl:h-16 xl:w-16 xl:text-3xl">
                                             <Icon />
                                         </div>
                                     </div>
 
-                                    <h3 className="mt-7 text-2xl font-semibold leading-tight text-[#061D3A] transition duration-300 group-hover:text-white">
+                                    <h3 className="mt-7 wrap-break-word text-2xl font-semibold leading-tight text-[#061D3A] transition duration-300 group-hover:text-white lg:mt-5 lg:text-lg xl:mt-7 xl:text-2xl">
                                         {service.title}
                                     </h3>
 
-                                    <span className="mt-4 h-0.5 w-12 bg-[#D7A332]" />
+                                    <span className="mt-4 h-0.5 w-12 bg-[#D7A332] lg:w-10 xl:w-12" />
 
-                                    <p className="mt-5 text-base leading-7 text-gray-600 transition duration-300 group-hover:text-white/80">
+                                    <p className="mt-5 text-base leading-7 text-gray-600 transition duration-300 group-hover:text-white/80 lg:mt-4 lg:text-sm lg:leading-6 xl:mt-5 xl:text-base xl:leading-7">
                                         {service.description}
                                     </p>
                                 </div>
 
-                                <Link
-                                    href={service.href}
-                                    className="flex items-center justify-between border-t border-gray-200 px-7 py-5 transition duration-300 group-hover:border-white/20"
-                                >
-                                    <span className="text-sm font-semibold uppercase tracking-widest text-[#D7A332]">
+                                <div className="flex items-center justify-between border-t border-gray-200 px-7 py-5 transition duration-300 group-hover:border-white/20 lg:px-5 lg:py-4 xl:px-7 xl:py-5">
+                                    <span className="text-sm font-semibold uppercase tracking-widest text-[#D7A332] lg:text-xs xl:text-sm">
                                         Read More
                                     </span>
 
-                                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#D7A332] text-lg text-[#061D3A] transition duration-300 group-hover:translate-x-1">
+                                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#D7A332] text-lg text-[#061D3A] transition duration-300 group-hover:translate-x-1 lg:h-9 lg:w-9 lg:text-base xl:h-11 xl:w-11 xl:text-lg">
                                         <FiArrowRight />
                                     </span>
-                                </Link>
+                                </div>
 
                                 <div className="h-2 bg-[#061D3A] transition duration-300 group-hover:bg-[#D7A332]" />
-                            </article>
+                            </Link>
                         );
                     })}
                 </div>

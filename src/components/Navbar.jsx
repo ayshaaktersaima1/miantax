@@ -157,7 +157,7 @@ const Navbar = () => {
     };
 
     const navLinkClass = (href) => {
-        return `text-base font-semibold transition hover:text-[#D7A332] ${pathname === href
+        return `whitespace-nowrap font-semibold transition hover:text-[#D7A332] lg:text-sm xl:text-base ${pathname === href
             ? "text-[#D7A332]"
             : "text-[#061D3A]"
             }`;
@@ -174,11 +174,11 @@ const Navbar = () => {
                             width={220}
                             height={80}
                             priority
-                            className="h-auto w-40 object-contain lg:w-52"
+                            className="h-auto w-40 object-contain lg:w-40 xl:w-52"
                         />
                     </Link>
 
-                    <div className="hidden items-center gap-6 lg:flex">
+                    <div className="hidden items-center lg:gap-4 lg:flex xl:gap-6">
                         <Link
                             href="/"
                             className={navLinkClass("/")}
@@ -192,11 +192,17 @@ const Navbar = () => {
                         >
                             About Us
                         </Link>
+                        <Link
+                            href="/our-team"
+                            className={navLinkClass("/our-team")}
+                        >
+                            Our Team
+                        </Link>
 
                         <div className="group/services relative">
                             <Link
                                 href="/services"
-                                className={`flex items-center gap-1 text-base font-semibold transition hover:text-[#D7A332] ${pathname === "/services"
+                                className={`flex items-center gap-1 whitespace-nowrap font-semibold transition hover:text-[#D7A332] lg:text-sm xl:text-base ${pathname === "/services"
                                     ? "text-[#D7A332]"
                                     : "text-[#061D3A]"
                                     }`}
@@ -294,6 +300,13 @@ const Navbar = () => {
                         </div>
 
                         <Link
+                            href="/international-services"
+                            className={navLinkClass("/international-services")}
+                        >
+                            International Services
+                        </Link>
+
+                        <Link
                             href="/blog"
                             className={navLinkClass("/blog")}
                         >
@@ -317,7 +330,7 @@ const Navbar = () => {
                             className="text-[#D7A332]"
                         />
 
-                        <p className="font-semibold">
+                        <p className="whitespace-nowrap font-semibold lg:text-sm xl:text-base">
                             0300-0053038
                         </p>
                     </Link>
