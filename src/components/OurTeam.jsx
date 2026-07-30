@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IoMdCheckmark } from "react-icons/io";
 
 const teamMembers = [
     {
@@ -60,31 +61,39 @@ const OurTeam = () => {
                     </p>
                 </div>
 
-                <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {teamMembers.map((member) => (
                         <article
                             key={member.id}
-                            className="overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="group rounded-3xl border border-gray-200 bg-white px-6 py-8 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
                         >
-                            <div className="relative aspect-square">
-                                <Image
-                                    src={member.image}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover"
-                                />
+                            <div className="relative mx-auto h-40 w-40">
+                                <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-white shadow-lg">
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover transition duration-500 group-hover:scale-105"
+                                    />
+                                </div>
+
+                                <div className="absolute bottom-2 right-2 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#061D3A] text-sm text-white shadow-md">
+                                    <IoMdCheckmark />
+                                </div>
                             </div>
 
-                            <div className="p-5">
-                                <h3 className="text-xl font-semibold text-[#061D3A]">
+                            <div className="mt-6">
+                                <h3 className="text-2xl font-semibold text-[#061D3A]">
                                     {member.name}
                                 </h3>
 
-                                <p className="mt-1 text-sm font-semibold text-[#D7A332]">
+                                <p className="mt-2 text-sm font-semibold text-[#D7A332]">
                                     {member.designation}
                                 </p>
 
-                                <p className="mt-4 text-base leading-7 text-[#243044]">
+                                <div className="mx-auto mt-5 h-px w-full bg-gray-200" />
+
+                                <p className="mt-5 text-base leading-7 text-[#243044]">
                                     {member.description}
                                 </p>
                             </div>
